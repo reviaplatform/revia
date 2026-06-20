@@ -1,0 +1,84 @@
+services:
+  mongo:
+    image: mongo:7
+    volumes:
+      - mongo_data:/data/db
+    restart: unless-stopped
+
+  backend:
+    build:
+      context: ./backend
+    ports:
+      - "${BACKEND_PORT:-10001}:10001"
+    depends_on:
+      - mongo
+    environment:
+      PORT: 10001
+      NODE_ENV: ${NODE_ENV:-development}
+      MONGODB_URI: ${MONGODB_URI:-mongodb://mongo:27017/revia}
+      ADMIN_ACCESS_TOKEN_KEY: ${ADMIN_ACCESS_TOKEN_KEY}
+      ADMIN_ACCESS_TOKEN_EXP: ${ADMIN_ACCESS_TOKEN_EXP:-30d}
+      PROVIDER_ACCESS_TOKEN_KEY: ${PROVIDER_ACCESS_TOKEN_KEY}
+      PROVIDER_ACCESS_TOKEN_EXP: ${PROVIDER_ACCESS_TOKEN_EXP:-30d}
+      USER_ACCESS_TOKEN_KEY: ${USER_ACCESS_TOKEN_KEY}
+      USER_ACCESS_TOKEN_EXP: ${USER_ACCESS_TOKEN_EXP:-30d}
+      USER_REFRESH_TOKEN_KEY: ${USER_REFRESH_TOKEN_KEY}
+      USER_REFRESH_TOKEN_EXP: ${USER_REFRESH_TOKEN_EXP:-30d}
+      REGISTER_ACCESS_TOKEN_KEY: ${REGISTER_ACCESS_TOKEN_KEY}
+      REGISTER_ACCESS_TOKEN_EXP: ${REGISTER_ACCESS_TOKEN_EXP:-30m}
+      EMAIL_SENDER: ${EMAIL_SENDER}
+      EMAIL_SENDER_NAME: ${EMAIL_SENDER_NAME}
+      EMAIL_SENDER_PASSWORD: ${EMAIL_SENDER_PASSWORD}
+      SMS_ACCESS_TOKEN: ${SMS_ACCESS_TOKEN}
+      STORAGE_PROVIDER: ${STORAGE_PROVIDER:-local}
+      S3_BUCKET_NAME: ${S3_BUCKET_NAME}
+      S3_REGION: ${S3_REGION}
+      S3_ACCESS_KEY_ID: ${S3_ACCESS_KEY_ID}
+      S3_SECRET_ACCESS_KEY: ${S3_SECRET_ACCESS_KEY}
+      DOMAIN: ${DOMAIN:-http://localhost:10001}
+      KASHIER_MERCHANT_ID: ${KASHIER_MERCHANT_ID}
+      KASHIER_API_KEY: ${KASHIER_API_KEY}
+      KASHIER_SECRET_KEY: ${KASHIER_SECRET_KEY}
+      GEMINI_API_KEY: ${GEMINI_API_KEY}
+      SUPABASE_URL: ${SUPABASE_URL}
+      SUPABASE_ANON_KEY: ${SUPABASE_ANON_KEY}
+    volumes:
+      - backend_uploads:/app/uploads
+    restart: unless-stopped
+
+  admin-frontend:
+    build:
+      context: ./admin-frontend
+      args:
+        NEXT_PUBLIC_API_URL: ${ADMIN_NEXT_PUBLIC_API_URL:-http://localhost:10001/api/v1/admin}
+    ports:
+      - "${ADMIN_PORT:-3000}:3000"
+    depends_on:
+      - backend
+    restart: unless-stopped
+
+  customer-frontend:
+    build:
+      context: ./customer-frontend
+      args:
+        NEXT_PUBLIC_API_URL: ${CUSTOMER_NEXT_PUBLIC_API_URL:-http://localhost:10001}
+    ports:
+      - "${CUSTOMER_PORT:-3001}:3000"
+    depends_on:
+      - backend
+    restart: unless-stopped
+
+  provider-frontend:
+    build:
+      context: ./provider-frontend
+      args:
+        NEXT_PUBLIC_API_URL: ${PROVIDER_NEXT_PUBLIC_API_URL:-http://localhost:10001}
+    ports:
+      - "${PROVIDER_PORT:-3002}:3000"
+    depends_on:
+      - backend
+    restart: unless-stopped
+
+volumes:
+  backend_uploads:
+  mongo_data:
