@@ -1,0 +1,1029 @@
+{
+  "info": {
+    "_postman_id": "28958bef-c8d0-4744-b01f-2edf3f5cebf1",
+    "name": "Revia - Admin API",
+    "description": "Revia Admin API collection. After login, the access token is automatically saved to the `adminAccessToken` variable and used in all subsequent requests.",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "49384247",
+    "_collection_link": "https://go.postman.co/collection/49384247-28958bef-c8d0-4744-b01f-2edf3f5cebf1?source=collection_link"
+  },
+  "item": [
+    {
+      "name": "Auth",
+      "item": [
+        {
+          "name": "Login",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "exec": [
+                  "const res = pm.response.json();",
+                  "if (res && res.data && res.data.accessToken) {",
+                  "    pm.collectionVariables.set('adminAccessToken', res.data.accessToken);",
+                  "    console.log('✅ adminAccessToken saved:', res.data.accessToken);",
+                  "} else {",
+                  "    console.warn('⚠️ No accessToken found in response:', JSON.stringify(res));",
+                  "}"
+                ],
+                "type": "text/javascript",
+                "packages": {},
+                "requests": {}
+              }
+            }
+          ],
+          "request": {
+            "auth": {
+              "type": "noauth"
+            },
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"email\": \"eng.youssef.gamal@gmail.com\",\n  \"password\": \"Y@ussef1\",\n  \"languagePreference\": \"en\"\n}"
+            },
+            "url": {
+              "raw": "{{baseUrl}}/auth/login",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "auth",
+                "login"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Forgot Password",
+          "request": {
+            "auth": {
+              "type": "noauth"
+            },
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"email\": \"eng.youssef.gamal@gmail.com\",\n  \"languagePreference\": \"en\"\n}"
+            },
+            "url": {
+              "raw": "{{baseUrl}}/auth/forgot-password",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "auth",
+                "forgot-password"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Verify Password OTP",
+          "request": {
+            "auth": {
+              "type": "noauth"
+            },
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"email\": \"eng.youssef.gamal@gmail.com\",\n  \"otp\": \"606392\",\n  \"languagePreference\": \"en\"\n}"
+            },
+            "url": {
+              "raw": "{{baseUrl}}/auth/verify-password-otp",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "auth",
+                "verify-password-otp"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Reset Password",
+          "request": {
+            "auth": {
+              "type": "noauth"
+            },
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"email\": \"eng.youssef.gamal@gmail.com\",\n  \"newPassword\": \"Y@ussef1\",\n  \"otp\": \"606392\",\n  \"languagePreference\": \"en\"\n}"
+            },
+            "url": {
+              "raw": "{{baseUrl}}/auth/reset-password",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "auth",
+                "reset-password"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Profile",
+      "item": [
+        {
+          "name": "Get My Profile",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/me",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "me"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Update My Profile",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"name\": \"Super Admin\",\n  \"languagePreference\": \"en\"\n}"
+            },
+            "url": {
+              "raw": "{{baseUrl}}/me",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "me"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Update My Password",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"oldPassword\": \"12345678\",\n  \"newPassword\": \"12345678\",\n  \"confNewPassword\": \"12345678\"\n}"
+            },
+            "url": {
+              "raw": "{{baseUrl}}/me/password",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "me",
+                "password"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Account Management - Admins",
+      "item": [
+        {
+          "name": "Get Admin List",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/account/admin-list?page=1&limit=20",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "account",
+                "admin-list"
+              ],
+              "query": [
+                {
+                  "key": "page",
+                  "value": "1"
+                },
+                {
+                  "key": "limit",
+                  "value": "20"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get Single Admin",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/account/:id/admin",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "account",
+                ":id",
+                "admin"
+              ],
+              "variable": [
+                {
+                  "key": "id",
+                  "value": "699b809fa47bdae3672b912d"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Create Admin",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"name\": \"New admin\",\n  \"email\": \"eng.youssef.gamal@gmail.com\",\n  \"phoneNumber\": \"01027335099\",\n  \"role\": \"admin\"\n}"
+            },
+            "url": {
+              "raw": "{{baseUrl}}/account/create-admin",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "account",
+                "create-admin"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Update Admin",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"role\": \"manager\"\n}"
+            },
+            "url": {
+              "raw": "{{baseUrl}}/account/:id/update-admin",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "account",
+                ":id",
+                "update-admin"
+              ],
+              "variable": [
+                {
+                  "key": "id",
+                  "value": "699b809fa47bdae3672b912d"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Ban Admin",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/account/:id/ban-admin",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "account",
+                ":id",
+                "ban-admin"
+              ],
+              "variable": [
+                {
+                  "key": "id",
+                  "value": "699b809fa47bdae3672b912d"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Unban Admin",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/account/:id/unban-admin",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "account",
+                ":id",
+                "unban-admin"
+              ],
+              "variable": [
+                {
+                  "key": "id",
+                  "value": "699b809fa47bdae3672b912d"
+                }
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Account Management - Customers",
+      "item": [
+        {
+          "name": "Get Customer List",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/account/customer-list?page=1&limit=20",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "account",
+                "customer-list"
+              ],
+              "query": [
+                {
+                  "key": "page",
+                  "value": "1"
+                },
+                {
+                  "key": "limit",
+                  "value": "20"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get Single Customer",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/account/:id/customer",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "account",
+                ":id",
+                "customer"
+              ],
+              "variable": [
+                {
+                  "key": "id",
+                  "value": "699b7aec316f0dc6955daa06"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Ban Customer",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/account/:id/ban-customer",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "account",
+                ":id",
+                "ban-customer"
+              ],
+              "variable": [
+                {
+                  "key": "id",
+                  "value": "699b7aec316f0dc6955daa06"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Unban Customer",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/account/:id/unban-customer",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "account",
+                ":id",
+                "unban-customer"
+              ],
+              "variable": [
+                {
+                  "key": "id",
+                  "value": "699b7aec316f0dc6955daa06"
+                },
+                {
+                  "key": "id",
+                  "value": "699b7aec316f0dc6955daa06"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Restore Customer Account",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/account/:id/restore-customer",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "account",
+                ":id",
+                "restore-customer"
+              ],
+              "variable": [
+                {
+                  "key": "id",
+                  "value": "699b7aec316f0dc6955daa06"
+                },
+                {
+                  "key": "id",
+                  "value": "699b7aec316f0dc6955daa06"
+                }
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Account Management - Providers",
+      "item": [
+        {
+          "name": "Get Provider List",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/account/provider-list?page=1&limit=20",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "account",
+                "provider-list"
+              ],
+              "query": [
+                {
+                  "key": "page",
+                  "value": "1"
+                },
+                {
+                  "key": "limit",
+                  "value": "20"
+                }
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Brand",
+      "item": [
+        {
+          "name": "Get Brand List",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/brand/list?page=1&limit=20",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "brand",
+                "list"
+              ],
+              "query": [
+                {
+                  "key": "page",
+                  "value": "1"
+                },
+                {
+                  "key": "limit",
+                  "value": "20"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Approve Brand",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/brand/:id/approve",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "brand",
+                ":id",
+                "approve"
+              ],
+              "variable": [
+                {
+                  "key": "id",
+                  "value": "699b89febfd570445b843c2e"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Ban Brand",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/brand/:id/ban",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "brand",
+                ":id",
+                "ban"
+              ],
+              "variable": [
+                {
+                  "key": "id",
+                  "value": "BRAND_ID_HERE"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Unban Brand",
+          "request": {
+            "method": "PUT",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/brand/:id/unban",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "brand",
+                ":id",
+                "unban"
+              ],
+              "variable": [
+                {
+                  "key": "id",
+                  "value": "BRAND_ID_HERE"
+                }
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Category",
+      "item": [
+        {
+          "name": "Get Category List",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/category/list?page=1&limit=20",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "category",
+                "list"
+              ],
+              "query": [
+                {
+                  "key": "page",
+                  "value": "1"
+                },
+                {
+                  "key": "limit",
+                  "value": "20"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Create Category",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"name\": {\n    \"en\": \"TEST\",\n    \"ar\": \"تيست\"\n  },\n  \"commissionPerRequest\": 10\n}"
+            },
+            "url": {
+              "raw": "{{baseUrl}}/category/create",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "category",
+                "create"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Update Category",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"name\": {\n    \"en\": \"phone\",\n    \"ar\": \"موبال\"\n  },\n  \"commissionPerRequest\": 15,\n  \"isActive\": true\n}"
+            },
+            "url": {
+              "raw": "{{baseUrl}}/category/:id/update",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "category",
+                ":id",
+                "update"
+              ],
+              "variable": [
+                {
+                  "key": "id",
+                  "value": "699b859d51963f0a26785a06"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Delete Category",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/category/:id/delete",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "category",
+                ":id",
+                "delete"
+              ],
+              "variable": [
+                {
+                  "key": "id",
+                  "value": "699b85f251963f0a26785a12"
+                }
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Payouts",
+      "item": [
+        {
+          "name": "Get Payouts",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/payouts",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "payouts"
+              ],
+              "query": [
+                {
+                  "key": "page",
+                  "value": "1",
+                  "disabled": true
+                },
+                {
+                  "key": "limit",
+                  "value": "20",
+                  "disabled": true
+                },
+                {
+                  "key": "status",
+                  "value": "pending",
+                  "disabled": true
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Mark Payout as Sent",
+          "request": {
+            "method": "PATCH",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/payouts/:id/send",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "payouts",
+                ":id",
+                "send"
+              ],
+              "variable": [
+                {
+                  "key": "id",
+                  "value": "69acde08a7b42a7383629334"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Reject Payout",
+          "request": {
+            "method": "PATCH",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/payouts/:id/reject",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "payouts",
+                ":id",
+                "reject"
+              ],
+              "variable": [
+                {
+                  "key": "id",
+                  "value": "PAYOUT_ID_HERE"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get Wallet Transactions",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/payouts/wallet/transactions",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "payouts",
+                "wallet",
+                "transactions"
+              ],
+              "query": [
+                {
+                  "key": "page",
+                  "value": "1",
+                  "disabled": true
+                },
+                {
+                  "key": "limit",
+                  "value": "20",
+                  "disabled": true
+                },
+                {
+                  "key": "brandId",
+                  "value": "BRAND_ID_HERE",
+                  "disabled": true
+                }
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Repair Requests",
+      "item": [
+        {
+          "name": "Get Repair Requests",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/repair-requests?page=1&limit=20",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "repair-requests"
+              ],
+              "query": [
+                {
+                  "key": "page",
+                  "value": "1"
+                },
+                {
+                  "key": "limit",
+                  "value": "20"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get Single Request",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/repair-requests/:requestId",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "repair-requests",
+                ":requestId"
+              ],
+              "variable": [
+                {
+                  "key": "requestId",
+                  "value": "69acc6d6fd28da5255670b1f"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get Request Inspection",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/repair-requests/:requestId/inspection",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "repair-requests",
+                ":requestId",
+                "inspection"
+              ],
+              "variable": [
+                {
+                  "key": "requestId",
+                  "value": "69acc6d6fd28da5255670b1f"
+                }
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    }
+  ],
+  "auth": {
+    "type": "bearer",
+    "bearer": [
+      {
+        "key": "token",
+        "value": "{{adminAccessToken}}",
+        "type": "string"
+      }
+    ]
+  },
+  "variable": [
+    {
+      "key": "baseUrl",
+      "value": "http://localhost:10001/api/v1/admin",
+      "type": "string"
+    },
+    {
+      "key": "adminAccessToken",
+      "value": "",
+      "type": "string"
+    }
+  ]
+}

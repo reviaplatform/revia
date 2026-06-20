@@ -1,0 +1,225 @@
+@import "tailwindcss";
+@import "./animate.css";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme {
+  --color-brand-50: oklch(0.97 0.01 258);
+  --color-brand-100: oklch(0.92 0.03 258);
+  --color-brand-200: oklch(0.85 0.08 258);
+  --color-brand-300: oklch(0.75 0.12 258);
+  --color-brand-400: oklch(0.65 0.18 258);
+  --color-brand-500: oklch(0.55 0.22 258); /* Webflow Blue #146ef5 */
+  --color-brand-600: oklch(0.45 0.22 258);
+  --color-brand-700: oklch(0.35 0.22 258);
+  --color-brand-800: oklch(0.25 0.22 258);
+  --color-brand-900: oklch(0.15 0.22 258);
+  --color-brand-950: oklch(0.1 0.22 258);
+
+  --color-secondary-purple: oklch(0.5 0.28 285);
+  --color-secondary-pink: oklch(0.65 0.25 325);
+  --color-secondary-green: oklch(0.75 0.25 145);
+  --color-secondary-orange: oklch(0.65 0.25 45);
+  --color-secondary-yellow: oklch(0.8 0.18 85);
+  --color-secondary-red: oklch(0.55 0.22 25);
+
+  --color-slate-500: #6d6d6d;
+  --color-slate-600: #6d6d6d;
+
+  --font-sans: var(--font-host-grotesk), var(--font-cairo), system-ui, sans-serif;
+  --font-host-grotesk: "Host Grotesk", sans-serif;
+  --font-cairo: "Cairo", sans-serif;
+
+  /* Global Shadow Neutralization */
+  --shadow-sm: none;
+  --shadow-md: none;
+  --shadow-lg: none;
+  --shadow-xl: none;
+  --shadow-2xl: none;
+  --shadow-inner: none;
+  --drop-shadow-sm: none;
+  --drop-shadow-md: none;
+  --drop-shadow-lg: none;
+  --drop-shadow-xl: none;
+  --drop-shadow-2xl: none;
+}
+
+:root {
+  --radius: 0.5rem; /* Standardized to Webflow's 8px sharp radius */
+  --background: oklch(1 0 0);
+  --foreground: oklch(0.12 0 0); /* Near Black #080808 */
+  --card: oklch(1 0 0);
+  --card-foreground: oklch(0.12 0 0);
+  --popover: oklch(1 0 0);
+  --popover-foreground: oklch(0.12 0 0);
+  --primary: oklch(0.55 0.22 258); /* Webflow Blue */
+  --primary-foreground: oklch(1 0 0);
+  --secondary: oklch(0.97 0 0);
+  --secondary-foreground: oklch(0.12 0 0);
+  --muted: oklch(0.97 0 0);
+  --muted-foreground: oklch(0.55 0 0);
+  --accent: oklch(0.97 0 0);
+  --accent-foreground: oklch(0.12 0 0);
+  --destructive: oklch(0.55 0.22 25);
+  --border: oklch(0.92 0 0);
+  --input: oklch(0.92 0 0);
+  --ring: oklch(0.55 0.22 258);
+  
+  /* Neutralized Shadow System for Flat Design */
+  --: none;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+  }
+}
+
+[lang="ar"] {
+  --font-sans: var(--font-cairo), var(--font-host-grotesk), system-ui, sans-serif;
+}
+
+body {
+  background-color: var(--background);
+  overscroll-behavior: none;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+}
+
+#smooth-content {
+  overflow: visible;
+  width: 100%;
+}
+
+@theme inline {
+  --radius-sm: 2px;
+  --radius-md: 4px;
+  --radius-lg: 8px;
+  --radius-xl: 12px;
+  --radius-2xl: 16px;
+  
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+
+  /* Webflow Modular Scale */
+  --font-size-display: 5rem;    /* 80px */
+  --font-size-heading: 3.5rem;  /* 56px */
+  --font-size-subheading: 2rem; /* 32px */
+  --font-size-feature: 1.5rem;   /* 24px */
+  --font-size-body: 1.25rem;     /* 20px */
+  --font-size-standard: 1rem;    /* 16px */
+  --font-size-micro: 0.625rem;  /* 10px */
+
+  /* Spacing */
+  --spacing-fluid-sm: clamp(0.5rem, 0.4rem + 0.5vw, 0.75rem);
+  --spacing-fluid-md: clamp(1rem, 0.8rem + 1vw, 1.5rem);
+  --spacing-fluid-lg: clamp(1.5rem, 1.2rem + 1.5vw, 2.5rem);
+  --spacing-fluid-xl: clamp(2rem, 1.5rem + 2.5vw, 4rem);
+}
+
+.dark {
+  --background: oklch(0.1 0.03 258); /* Deep Midnight Navy */
+  --foreground: oklch(0.98 0.005 258);
+  --card: oklch(0.12 0.04 258);
+  --card-foreground: oklch(0.98 0.005 258);
+  --popover: oklch(0.12 0.04 258);
+  --popover-foreground: oklch(0.98 0.005 258);
+  --primary: oklch(0.6 0.2 258); /* Slightly more vibrant in dark mode */
+  --primary-foreground: oklch(0.1 0.03 258);
+  --secondary: oklch(0.18 0.05 258);
+  --secondary-foreground: oklch(0.98 0.005 258);
+  --muted: oklch(0.18 0.05 258);
+  --muted-foreground: oklch(0.6 0.02 258);
+  --accent: oklch(0.18 0.05 258);
+  --accent-foreground: oklch(0.98 0.005 258);
+  --destructive: oklch(0.65 0.25 25);
+  --border: oklch(1 0 0 / 10%);
+  --input: oklch(1 0 0 / 15%);
+  --ring: oklch(0.55 0.22 258);
+  
+  --sidebar: oklch(0.12 0.04 258);
+  --sidebar-foreground: oklch(0.98 0.005 258);
+  --sidebar-primary: oklch(0.6 0.2 258);
+  --sidebar-primary-foreground: oklch(0.98 0.005 258);
+  --sidebar-accent: oklch(0.18 0.05 258);
+  --sidebar-accent-foreground: oklch(0.98 0.005 258);
+  --sidebar-border: oklch(1 0 0 / 10%);
+  --sidebar-ring: oklch(0.55 0.22 258);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground antialiased;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-sans tracking-tight text-foreground antialiased;
+  }
+}
+
+@layer utilities {
+  .hover-translate {
+    @apply transition-transform duration-300;
+  }
+  .hover-translate:hover {
+    transform: translateY(-6px);
+  }
+  
+  .wf-uppercase-label {
+    @apply font-semibold uppercase tracking-[0.15em] text-[15px] leading-[1.3] text-foreground/60;
+  }
+
+  .font-host-grotesk {
+    font-family: var(--font-host-grotesk);
+  }
+
+  .rtl {
+    direction: rtl;
+  }
+  .ltr {
+    direction: ltr;
+  }
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  .no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+
+  /* Cairo Utilities */
+  .cairo-extralight { font-family: var(--font-cairo), sans-serif; font-weight: 200; }
+  .cairo-light { font-family: var(--font-cairo), sans-serif; font-weight: 300; }
+  .cairo-regular { font-family: var(--font-cairo), sans-serif; font-weight: 400; }
+  .cairo-medium { font-family: var(--font-cairo), sans-serif; font-weight: 500; }
+  .cairo-bold { font-family: var(--font-cairo), sans-serif; font-weight: 700; }
+  .cairo-extrabold { font-family: var(--font-cairo), sans-serif; font-weight: 800; }
+  .cairo-black { font-family: var(--font-cairo), sans-serif; font-weight: 900; }
+}

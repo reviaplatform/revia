@@ -1,0 +1,142 @@
+{
+  "invalidPhoneCredentials": "رقم الهاتف أو كلمة المرور غير صحيحة.",
+  "loginRateLimit": "محاولات تسجيل دخول كثيرة جدًا. حاول مرة أخرى لاحقًا.",
+  "signupRateLimit": "محاولات تسجيل كثيرة جدًا. حاول مرة أخرى لاحقًا.",
+  "notAllowed": "هذا الإجراء غير مسموح به.",
+  "rateLimitExceeded": "تم تجاوز الحد المسموح به. حاول مرة أخرى لاحقًا.",
+  "passwordResetRateLimit": "محاولات إعادة تعيين كلمة المرور كثيرة جدًا. حاول مرة أخرى لاحقًا.",
+  "invalidOTP": "رمز التحقق غير صحيح.",
+  "unauthorized": "غير مصرح لك بتنفيذ هذا الإجراء.",
+  "invalidAccessToken": "رمز الوصول غير صالح أو منتهي الصلاحية.",
+  "invalidRefreshToken": "رمز التحديث غير صالح أو منتهي الصلاحية.",
+  "invalidRegisterToken": "رمز التسجيل غير صالح أو منتهي الصلاحية.",
+  "BannedUserToken": "تم حظر حسابك.",
+  "invalidEmailCredentials": "البريد الإلكتروني أو كلمة المرور غير صحيحة.",
+  "pleaseTryAgain": "حدث خطأ ما، يرجى المحاولة مرة أخرى.",
+  "tryAgain": "يرجى المحاولة مرة أخرى.",
+  "invalidOldPassword": "كلمة المرور القديمة غير صحيحة.",
+  "notMatchPassword": "كلمتا المرور غير متطابقتين.",
+  "duplicateAdmin": "يوجد مسؤول بهذا البريد الإلكتروني مسبقًا.",
+  "notFoundAdmin": "المسؤول غير موجود.",
+  "notFoundUser": "المستخدم غير موجود.",
+  "duplicateUser": "يوجد مستخدم بهذه المعلومات مسبقًا.",
+  "duplicateMail": "هذا البريد الإلكتروني مستخدم مسبقًا.",
+  "UserAccountMustDeleted": "يجب حذف حسابك للمتابعة.",
+  "UserAccountMustActive": "يجب أن يكون حسابك نشطًا للمتابعة.",
+  "UserDeleteAccount": "تم حذف حسابك.",
+  "notFoundCategory": "الفئة غير موجودة.",
+  "notFoundBrand": "العلامة التجارية غير موجودة.",
+  "invalidBranchIndex": "فهرس الفرع غير صالح.",
+  "duplicateProvider": "يوجد مزود بهذه المعلومات مسبقًا.",
+  "notFoundProvider": "المزود غير موجود.",
+  "notFoundDevice": "الجهاز غير موجود.",
+  "notFoundRepairRequest": "طلب الإصلاح غير موجود.",
+  "notFoundBrandOffer": "عرض العلامة التجارية غير موجود.",
+  "duplicateBrandOffer": "يوجد عرض للعلامة التجارية مسبقًا.",
+  "notFoundInspection": "الفحص غير موجود.",
+  "duplicateInspection": "يوجد فحص مسبقًا.",
+  "notFoundPayment": "الدفعة غير موجودة.",
+  "notFoundChatSession": "جلسة المحادثة غير موجودة.",
+  "repairRequestAlreadyCancelled": "تم إلغاء طلب الإصلاح هذا مسبقًا.",
+  "invalidRepairRequestStatus": "حالة طلب الإصلاح غير صالحة.",
+  "offerAlreadyResponded": "تم الرد على هذا العرض مسبقًا.",
+  "duplicateBrandReview": "لقد قمت بتقييم هذه العلامة التجارية مسبقًا.",
+  "cannotReviewUncompletedRequest": "لا يمكنك تقييم طلب غير مكتمل.",
+  "notFoundBrandReview": "تقييم العلامة التجارية غير موجود.",
+  "notFoundPayout": "الدفعة المستحقة غير موجودة.",
+  "payoutAlreadyProcessed": "تمت معالجة هذه الدفعة المستحقة مسبقًا.",
+  "insufficientWalletBalance": "رصيد المحفظة غير كافٍ.",
+  "payoutAmountTooLow": "مبلغ السحب منخفض جدًا.",
+  "notFoundReel": "الريل غير موجود.",
+  "notFoundSupportTicket": "تذكرة الدعم غير موجودة.",
+  "notFoundSubscription": "الاشتراك غير موجود.",
+  "activeSubscriptionExists": "يوجد اشتراك نشط مسبقًا.",
+  "subscriptionRequired": "يتطلب الوصول إلى هذه الميزة وجود اشتراك.",
+  "subscriptionAlreadyActive": "هذا الاشتراك نشط مسبقًا.",
+  "EndPoint Not Found!": "نقطة النهاية غير موجودة.",
+  "User does not exist.": "المستخدم غير موجود.",
+  "message": {
+    "somethingWentWrong": "حدث خطأ ما."
+  },
+  "validation": {
+    "name": {
+      "en": {
+        "required": "الاسم بالإنجليزية مطلوب.",
+        "min": "يجب أن يتكون الاسم بالإنجليزية من حرف واحد على الأقل.",
+        "max": "يجب ألا يتجاوز الاسم بالإنجليزية 30 حرفًا."
+      },
+      "ar": {
+        "required": "الاسم بالعربية مطلوب.",
+        "min": "يجب أن يتكون الاسم بالعربية من حرف واحد على الأقل.",
+        "max": "يجب ألا يتجاوز الاسم بالعربية 30 حرفًا."
+      }
+    },
+    "id": {
+      "invalid": "صيغة المعرف غير صالحة.",
+      "required": "المعرف مطلوب."
+    },
+    "location": {
+      "longitude": {
+        "invalid": "قيمة خط الطول غير صالحة.",
+        "min": "يجب أن يكون خط الطول -180 على الأقل.",
+        "max": "يجب أن يكون خط الطول 180 على الأكثر.",
+        "required": "خط الطول مطلوب."
+      },
+      "latitude": {
+        "invalid": "قيمة خط العرض غير صالحة.",
+        "min": "يجب أن يكون خط العرض -90 على الأقل.",
+        "max": "يجب أن يكون خط العرض 90 على الأكثر.",
+        "required": "خط العرض مطلوب."
+      }
+    },
+    "image": {
+      "minSize": "حجم الصورة صغير جدًا.",
+      "maxSize": "يجب ألا يتجاوز حجم الصورة 10 ميجابايت.",
+      "required": "الصورة مطلوبة."
+    },
+    "gender": {
+      "invalid": "قيمة الجنس غير صالحة.",
+      "required": "الجنس مطلوب."
+    },
+    "appBirthday": {
+      "invalid": "تاريخ الميلاد غير صالح.",
+      "required": "تاريخ الميلاد مطلوب."
+    },
+    "email": {
+      "invalid": "البريد الإلكتروني غير صالح.",
+      "required": "البريد الإلكتروني مطلوب."
+    },
+    "languagePreference": {
+      "invalid": "تفضيل اللغة غير صالح.",
+      "required": "تفضيل اللغة مطلوب."
+    },
+    "otp": {
+      "length": "يجب أن يتكون رمز التحقق من 6 أرقام.",
+      "required": "رمز التحقق مطلوب."
+    },
+    "password": {
+      "minLength": "يجب أن تتكون كلمة المرور من 8 أحرف على الأقل.",
+      "maxLength": "يجب ألا تتجاوز كلمة المرور 30 حرفًا.",
+      "strong": "يجب أن تحتوي كلمة المرور على حرف كبير وحرف صغير ورقم ورمز خاص.",
+      "required": "كلمة المرور مطلوبة."
+    },
+    "adminRole": {
+      "invalid": "دور المسؤول غير صالح.",
+      "required": "دور المسؤول مطلوب."
+    },
+    "providerRole": {
+      "invalid": "دور المزود غير صالح.",
+      "required": "دور المزود مطلوب."
+    },
+    "fullName": {
+      "required": "الاسم الكامل مطلوب.",
+      "min": "يجب أن يتكون الاسم الكامل من حرف واحد على الأقل.",
+      "max": "يجب ألا يتجاوز الاسم الكامل 55 حرفًا."
+    },
+    "phoneNumber": {
+      "min": "يجب أن يتكون رقم الهاتف من 11 رقمًا على الأقل.",
+      "max": "يجب ألا يتجاوز رقم الهاتف 11 رقمًا.",
+      "required": "رقم الهاتف مطلوب."
+    }
+  }
+}

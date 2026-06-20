@@ -1,0 +1,12 @@
+node_modules
+dist
+.dist
+logs
+*.log
+.env
+.env.*
+uploads
+.git
+.DS_Store
+push.sh
+tmp

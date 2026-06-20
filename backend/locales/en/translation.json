@@ -1,0 +1,142 @@
+{
+  "invalidPhoneCredentials": "Invalid phone number or password.",
+  "loginRateLimit": "Too many login attempts. Please try again later.",
+  "signupRateLimit": "Too many signup attempts. Please try again later.",
+  "notAllowed": "This action is not allowed.",
+  "rateLimitExceeded": "Rate limit exceeded. Please try again later.",
+  "passwordResetRateLimit": "Too many password reset attempts. Please try again later.",
+  "invalidOTP": "Invalid OTP code.",
+  "unauthorized": "You are not authorized to perform this action.",
+  "invalidAccessToken": "Invalid or expired access token.",
+  "invalidRefreshToken": "Invalid or expired refresh token.",
+  "invalidRegisterToken": "Invalid or expired register token.",
+  "BannedUserToken": "Your account has been banned.",
+  "invalidEmailCredentials": "Invalid email or password.",
+  "pleaseTryAgain": "Something went wrong, please try again.",
+  "tryAgain": "Please try again.",
+  "invalidOldPassword": "The old password is incorrect.",
+  "notMatchPassword": "Passwords do not match.",
+  "duplicateAdmin": "An admin with this email already exists.",
+  "notFoundAdmin": "Admin not found.",
+  "notFoundUser": "User not found.",
+  "duplicateUser": "A user with this information already exists.",
+  "duplicateMail": "This email is already in use.",
+  "UserAccountMustDeleted": "Your account must be deleted to proceed.",
+  "UserAccountMustActive": "Your account must be active to proceed.",
+  "UserDeleteAccount": "Your account has been deleted.",
+  "notFoundCategory": "Category not found.",
+  "notFoundBrand": "Brand not found.",
+  "invalidBranchIndex": "Invalid branch index.",
+  "duplicateProvider": "A provider with this information already exists.",
+  "notFoundProvider": "Provider not found.",
+  "notFoundDevice": "Device not found.",
+  "notFoundRepairRequest": "Repair request not found.",
+  "notFoundBrandOffer": "Brand offer not found.",
+  "duplicateBrandOffer": "A brand offer already exists.",
+  "notFoundInspection": "Inspection not found.",
+  "duplicateInspection": "An inspection already exists.",
+  "notFoundPayment": "Payment not found.",
+  "notFoundChatSession": "Chat session not found.",
+  "repairRequestAlreadyCancelled": "This repair request has already been cancelled.",
+  "invalidRepairRequestStatus": "Invalid repair request status.",
+  "offerAlreadyResponded": "This offer has already been responded to.",
+  "duplicateBrandReview": "You have already reviewed this brand.",
+  "cannotReviewUncompletedRequest": "You cannot review an uncompleted request.",
+  "notFoundBrandReview": "Brand review not found.",
+  "notFoundPayout": "Payout not found.",
+  "payoutAlreadyProcessed": "This payout has already been processed.",
+  "insufficientWalletBalance": "Insufficient wallet balance.",
+  "payoutAmountTooLow": "Payout amount is too low.",
+  "notFoundReel": "Reel not found.",
+  "notFoundSupportTicket": "Support ticket not found.",
+  "notFoundSubscription": "Subscription not found.",
+  "activeSubscriptionExists": "An active subscription already exists.",
+  "subscriptionRequired": "A subscription is required to access this feature.",
+  "subscriptionAlreadyActive": "This subscription is already active.",
+  "EndPoint Not Found!": "Endpoint not found.",
+  "User does not exist.": "User does not exist.",
+  "message": {
+    "somethingWentWrong": "Something went wrong."
+  },
+  "validation": {
+    "name": {
+      "en": {
+        "required": "English name is required.",
+        "min": "English name must be at least 1 character.",
+        "max": "English name must be at most 30 characters."
+      },
+      "ar": {
+        "required": "Arabic name is required.",
+        "min": "Arabic name must be at least 1 character.",
+        "max": "Arabic name must be at most 30 characters."
+      }
+    },
+    "id": {
+      "invalid": "Invalid ID format.",
+      "required": "ID is required."
+    },
+    "location": {
+      "longitude": {
+        "invalid": "Invalid longitude value.",
+        "min": "Longitude must be at least -180.",
+        "max": "Longitude must be at most 180.",
+        "required": "Longitude is required."
+      },
+      "latitude": {
+        "invalid": "Invalid latitude value.",
+        "min": "Latitude must be at least -90.",
+        "max": "Latitude must be at most 90.",
+        "required": "Latitude is required."
+      }
+    },
+    "image": {
+      "minSize": "Image size is too small.",
+      "maxSize": "Image size must not exceed 10MB.",
+      "required": "Image is required."
+    },
+    "gender": {
+      "invalid": "Invalid gender value.",
+      "required": "Gender is required."
+    },
+    "appBirthday": {
+      "invalid": "Invalid birthday value.",
+      "required": "Birthday is required."
+    },
+    "email": {
+      "invalid": "Invalid email address.",
+      "required": "Email is required."
+    },
+    "languagePreference": {
+      "invalid": "Invalid language preference.",
+      "required": "Language preference is required."
+    },
+    "otp": {
+      "length": "OTP must be 6 digits.",
+      "required": "OTP is required."
+    },
+    "password": {
+      "minLength": "Password must be at least 8 characters.",
+      "maxLength": "Password must be at most 30 characters.",
+      "strong": "Password must contain an uppercase letter, a lowercase letter, a number, and a special character.",
+      "required": "Password is required."
+    },
+    "adminRole": {
+      "invalid": "Invalid admin role.",
+      "required": "Admin role is required."
+    },
+    "providerRole": {
+      "invalid": "Invalid provider role.",
+      "required": "Provider role is required."
+    },
+    "fullName": {
+      "required": "Full name is required.",
+      "min": "Full name must be at least 1 character.",
+      "max": "Full name must be at most 55 characters."
+    },
+    "phoneNumber": {
+      "min": "Phone number must be at least 11 characters.",
+      "max": "Phone number must be at most 11 characters.",
+      "required": "Phone number is required."
+    }
+  }
+}

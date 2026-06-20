@@ -1,0 +1,715 @@
+{
+  "Dashboard": {
+    "title": "Dashboard Overview",
+    "subtitle": "Track your branch performance and key metrics",
+    "synchronizing": "Synchronizing Data...",
+    "liveSync": "Live Sync: Active",
+    "kpis": {
+      "walletBalance": "Wallet Balance",
+      "totalRevenue": "Total Revenue",
+      "activeRepairs": "Active Repairs",
+      "avgRating": "Avg. Rating",
+      "locked": "Locked",
+      "selectedPeriod": "In selected period",
+      "completedAllTime": "All-time Completed",
+      "fromReviews": "From {count} Reviews",
+      "periods": {
+        "LAST_24_HOURS": "Last 24 Hours",
+        "LAST_7_DAYS": "Last 7 Days",
+        "LAST_30_DAYS": "Last 30 Days",
+        "ALL_TIME": "All-time"
+      },
+      "status": {
+        "UP": "UP",
+        "DOWN": "DOWN"
+      }
+    },
+    "revenueFlow": {
+      "title": "Revenue Flow",
+      "credit": "Credit",
+      "debit": "Debit",
+      "onlinePayments": "Online Payments",
+      "cashPos": "Cash / POS",
+      "totalPayouts": "Total Payouts",
+      "netRevenue": "Net Revenue",
+      "grossVolume": "Gross Volume",
+      "disbursed": "Disbursed",
+      "noData": "No financial data detected"
+    },
+    "workflow": {
+      "title": "Workflow Activity",
+      "directVolume": "Direct Volume",
+      "aiAssisted": "AI Assisted",
+      "units": "UNITS",
+      "viewAll": "View All Activity"
+    },
+    "timeline": {
+      "title": "Request Timeline",
+      "requests": "{count} Requests",
+      "noActivity": "No activity log"
+    },
+    "offers": {
+      "title": "Offer Dynamics",
+      "pending": "{count} Pending",
+      "acceptanceMatrix": "Acceptance Matrix",
+      "strategicPipeline": "Strategic Pipeline",
+      "sent": "SENT",
+      "avgInspection": "Avg. Inspection",
+      "accepted": "Accepted ({count})",
+      "rejected": "Rejected ({count})",
+      "distributionMatrix": "Workflow Distribution Matrix"
+    },
+    "reviews": {
+      "title": "Sentiment Registry",
+      "count": "{count} REVIEWS",
+      "evolution": "Rating Evolution",
+      "startPeriod": "Start of Period",
+      "latestUpdate": "Latest Update"
+    },
+    "subscription": {
+      "title": "License Status",
+      "validity": "Validity until {date}",
+      "missing": "Registry entry missing",
+      "noPlan": "NO ACTIVE PLAN",
+      "opsWindow": "Operations Window",
+      "cyclesRemaining": "{count} Cycles Remaining"
+    },
+    "support": {
+      "title": "Support Operations",
+      "openReqs": "{count} OPEN REQS",
+      "inProgress": "In Progress",
+      "resolved": "Resolved",
+      "highPriority": "High Priority Protocol"
+    },
+    "nodes": {
+      "reviaAssistant": "Revia Assistant",
+      "messagingNode": "Unified Messaging Node",
+      "assetLedger": "Asset Ledger",
+      "capitalDisbursement": "Capital Disbursement",
+      "operations": "Operations",
+      "serviceRegistry": "Service Registry Hub",
+      "brandIdentity": "Brand Identity",
+      "profileReputation": "Profile & Reputation"
+    },
+    "systemConfig": "Access System Configuration"
+  },
+  "Navigation": {
+    "dashboard": "Dashboard",
+    "brand": "Brand",
+    "categories": "Categories",
+    "accounts": "Accounts",
+    "payouts": "Payouts",
+    "repairRequests": "Repair Requests",
+    "reels": "Reels",
+    "settings": "Settings",
+    "subscription": "Subscription",
+    "reviaAssistant": "Revia Assistant",
+    "support": "Support",
+    "platform": "Platform",
+    "logout": "Logout"
+  },
+  "Common": {
+    "loading": "Loading...",
+    "error": "Error",
+    "save": "Save",
+    "cancel": "Cancel",
+    "viewDetails": "View Details",
+    "registered": "Registered"
+  },
+  "RepairRequests": {
+    "title": "Service Requests",
+    "subtitle": "Track and manage customer repair jobs",
+    "refresh": "Refresh List",
+    "noData": "No repair requests found in this section.",
+    "generic": "Generic",
+    "terminal": "Terminal",
+    "viewDetails": "View Details",
+    "registered": "Registered",
+    "tabs": {
+      "active": "Active Requests",
+      "pending": "Pending Offers"
+    },
+    "status": {
+      "operational": "Operational",
+      "synced": "Registry Synced"
+    },
+    "statusLabels": {
+      "ai_assessing": "Assessment",
+      "pending_brand_selection": "Selection",
+      "pending_offers": "Offering",
+      "offer_selected": "Offer Accepted",
+      "inspection_pending": "Diagnosis",
+      "inspection_done": "Diagnosed",
+      "payment_pending": "Payment Pending",
+      "payment_done": "Paid",
+      "pending_provider_repair": "In Repair",
+      "pending_user_device_pickup": "Ready for Pickup",
+      "completed": "Completed",
+      "cancelled": "Cancelled"
+    }
+  },
+  "Brand": {
+    "title": "Brand Identity",
+    "subtitle": "Manage your branches and corporate settings",
+    "refresh": "Refresh",
+    "noData": "No data available",
+    "generic": "Brand",
+    "terminal": "Identity",
+    "tabs": {
+      "brand": "Brand Details",
+      "branches": "Branches ({count})",
+      "reviews": "Customer Reviews"
+    },
+    "status": {
+      "verified": "Verified Provider",
+      "network": "Branch Network",
+      "profile": "Verified Profile",
+      "account": "Verified Provider Account",
+      "operational": "Operational",
+      "system": "System Status"
+    },
+    "labels": {
+      "crn": "CRN",
+      "tin": "TIN",
+      "rating": "RATING",
+      "history": "SERVICE HISTORY",
+      "jobs": "{count} Jobs",
+      "legal": "Legal Identity",
+      "nameEn": "Brand Name (EN)",
+      "nameAr": "Arabic Name",
+      "expertise": "Service Expertise",
+      "operations": "Operations",
+      "pos": "On-Site Card Payments (POS)",
+      "posDesc": "Machine payments at branches.",
+      "liveOp": "Live Operation",
+      "liveOpDesc": "Allows immediate job receipt.",
+      "placeholderEn": "English Name",
+      "placeholderAr": "Arabic Name",
+      "legalId": "LEGAL ID",
+      "preciseMap": "Precise Map Coordinate"
+    },
+    "actions": {
+      "save": "Save Changes",
+      "saving": "Saving...",
+      "addBranch": "Add Branch",
+      "editBranch": "Edit Branch",
+      "newBranch": "New Branch",
+      "discard": "Discard",
+      "saveSuccess": "Brand settings saved successfully"
+    },
+    "noDataContent": {
+      "branches": "Your Network Awaits",
+      "branchesDesc": "Add physical locations to begin receiving location-based repair requests.",
+      "reviews": "Silence is Golden",
+      "reviewsDesc": "No community feedback recorded yet."
+    },
+    "reviews": {
+      "anonymous": "Anonymous",
+      "recent": "Recent Activity",
+      "noComment": "No additional feedback provided."
+    },
+    "branch": {
+      "active": "Active",
+      "inactive": "Inactive",
+      "location": "Branch Location"
+    }
+  },
+  "Payouts": {
+    "title": "Payout Center",
+    "subtitle": "Transaction History",
+    "requestPayout": "Request Payout",
+    "syncError": "Could not sync wallet data",
+    "availableBalance": "Available Payout Balance",
+    "verifiedEarnings": "Verified Earnings",
+    "gatewayActive": "Gateway Active",
+    "verifiedData": "Verified Data",
+    "lockedBalance": "Locked Balance",
+    "lockedDesc": "Balance is held during active transactions or 24-hour verification.",
+    "currency": "EGP",
+    "transactions": {
+      "title": "Transaction History",
+      "subtitle": "Detailed History",
+      "description": "Description",
+      "amount": "Amount",
+      "postState": "Post-State",
+      "date": "Date",
+      "noTransactions": "No transactions detected",
+      "amountLabel": "Amount (EGP)",
+      "runningBalance": "Running Balance"
+    },
+    "settlement": {
+      "title": "Settlement",
+      "subtitle": "Payout Status",
+      "noPayouts": "No payout requests found."
+    },
+    "status": {
+      "pending": "Pending",
+      "approved": "Approved",
+      "rejected": "Rejected",
+      "processed": "Processed",
+      "sent": "Sent"
+    },
+    "modal": {
+      "title": "Request Payout",
+      "subtitle": "Enter withdrawal details below",
+      "withdrawalAmount": "Withdrawal Amount",
+      "balance": "Balance: {amount} EGP",
+      "minAmountError": "Minimum payout amount is 50 EGP",
+      "insufficientBalance": "You do not have enough balance for this payout",
+      "methods": {
+        "instapay": "InstaPay",
+        "bank": "Bank SEPA",
+        "wallet": "M-Wallet"
+      },
+      "instapay": {
+        "address": "InstaPay Address",
+        "placeholder": "USERNAME@INSTAPAY",
+        "error": "IPA Identifier must be 3-100 characters"
+      },
+      "bank": {
+        "name": "Bank Name",
+        "placeholderName": "E.G. CIB, QNB, HSBC",
+        "iban": "IBAN",
+        "ibanPlaceholder": "EG00 0000 0000 0000 0000 0000 000",
+        "ibanError": "IBAN must be a valid Egyptian IBAN (EG + 25 digits)",
+        "accountNumber": "Account Number",
+        "accountNumberPlaceholder": "100XXXXXXXX",
+        "accountNumberError": "Account Number exceeds 30 characters",
+        "holderName": "Account Holder Name",
+        "holderPlaceholder": "FULL BANK ACCOUNT IDENTITY",
+        "bankNameError": "Bank Name must be 2-100 characters"
+      },
+      "wallet": {
+        "provider": "Wallet Provider",
+        "selectProvider": "Select Provider",
+        "phoneNumber": "Phone Number",
+        "phonePlaceholder": "01XXXXXXXXX",
+        "phoneError": "Phone number must be exactly 11 digits",
+        "holderName": "Account Holder Name",
+        "holderPlaceholder": "FULL WALLET OWNER NAME",
+        "providerError": "Select a wallet provider"
+      },
+      "holderNameError": "Account Holder Name must be 2-100 characters",
+      "submit": "Submit Request",
+      "submitting": "Submitting...",
+      "cancel": "Cancel",
+      "success": "Payout request submitted",
+      "fail": "Failed to submit request"
+    }
+  },
+  "Reels": {
+    "title": "Content Reels",
+    "subtitle": "Reel Management & Engagement",
+    "status": {
+      "sync": "Data Synchronized",
+      "published": "{count} Reels Published",
+      "visible": "VISIBLE",
+      "hidden": "HIDDEN"
+    },
+    "actions": {
+      "upload": "Upload Reel",
+      "uploadNow": "Upload Now",
+      "createFirst": "Create First Reel",
+      "hide": "HIDE",
+      "publish": "PUBLISH",
+      "cancel": "Cancel",
+      "saveChanges": "Save Changes",
+      "close": "Close"
+    },
+    "noData": {
+      "title": "No Reels Found",
+      "desc": "Upload your first video to start engaging with customers"
+    },
+    "labels": {
+      "noPreview": "No Preview Available",
+      "untitled": "Untitled Reel",
+      "uploadTitle": "Upload Reel",
+      "uploadDesc": "Add New Video Content to Dashboard",
+      "uploadVideo": "Upload Video File",
+      "uploadHint": "MP4, MOV // Max size: 10MB",
+      "ready": "READY",
+      "captionEn": "Caption (EN)",
+      "captionAr": "Caption (AR)",
+      "captionPlaceholderEn": "Enter caption...",
+      "captionPlaceholderAr": "اكتب الوصف...",
+      "editTitle": "Edit Reel Details",
+      "editDesc": "Update info for ID: {id}",
+      "visibility": "Visibility",
+      "visibilityDesc": "Choose if this reel is visible to customers.",
+      "reelDetails": "Reel Details",
+      "totalLikes": "Total Likes",
+      "totalViews": "Total Views",
+      "totalShares": "Total Shares",
+      "reelId": "Reel ID",
+      "capturedAt": "Captured At",
+      "statusLabel": "Status",
+      "mediaUnavailable": "Media Unavailable",
+      "category": "Category",
+      "categoryLaptop": "Laptop",
+      "categoryMobile": "Mobile",
+      "type": "Reel Type",
+      "typeTutorial": "Repairing Tutorial",
+      "typeGeneral": "General Content",
+      "deviceName": "Device Name",
+      "deviceNamePlaceholder": "e.g. iPhone 15 Pro",
+      "repairType": "Repair Task",
+      "repairScreen": "Screen Replacement",
+      "repairBattery": "Battery Service",
+      "repairHardware": "Hardware Repair",
+      "repairSoftware": "Software/OS"
+    },
+    "messages": {
+      "selectVideo": "Please select a video file",
+      "videoTooLarge": "Video is too large ({size}MB). Max allowed is 10MB.",
+      "createSuccess": "Reel created successfully!",
+      "createFail": "Failed to create reel",
+      "updateSuccess": "Reel updated!",
+      "updateFail": "Failed to update reel",
+      "deleteConfirm": "Are you sure you want to delete this reel?",
+      "deleteSuccess": "Reel deleted",
+      "deleteFail": "Failed to delete reel",
+      "visibilitySuccess": "Reel {status}",
+      "visibilityFail": "Failed to toggle visibility"
+    }
+  },
+  "Settings": {
+    "title": "Account Settings",
+    "subtitle": "Manage your profile and security configurations",
+    "status": {
+      "active": "Account Status: Active",
+      "authorized": "Session: Authorized"
+    },
+    "tabs": {
+      "profile": "Profile Info",
+      "preferences": "Preferences",
+      "notifications": "Notifications"
+    },
+    "profile": {
+      "title": "Account Identity",
+      "desc": "Manage your administrative profile and identity",
+      "fullName": "Full Name",
+      "email": "Email Address",
+      "phone": "Phone Number (Secured)",
+      "phoneDesc": "Biometric and hardware locks prevent direct channel mutation.",
+      "save": "Save Changes"
+    },
+    "preferences": {
+      "title": "System Preferences",
+      "desc": "General interface and language preferences.",
+      "language": "Language",
+      "currency": "Currency",
+      "interfaceMode": "Interface Mode",
+      "interfaceDesc": "Switch between light and dark themes.",
+      "lightMode": "Light Mode",
+      "darkMode": "Dark Mode"
+    },
+    "notifications": {
+      "title": "Notification Channels",
+      "desc": "Manage how you receive alerts and updates.",
+      "email": {
+        "title": "Email Alerts",
+        "desc": "Account updates and monthly reports."
+      },
+      "push": {
+        "title": "Push Notifications",
+        "desc": "Real-time browser notifications."
+      },
+      "service": {
+        "title": "Service Alerts",
+        "desc": "Get notified when new repair requests arrive."
+      },
+      "marketing": {
+        "title": "Marketing",
+        "desc": "Optional feature and growth updates."
+      }
+    },
+    "messages": {
+      "updateSuccess": "Settings updated successfully",
+      "updateError": "Failed to update settings"
+    }
+  },
+  "Categories": {
+    "title": "Service Categories",
+    "subtitle": "Manage eligible service segments and platform commission rates",
+    "activeCategories": "{count} CATEGORIES_ACTIVE",
+    "filterPlaceholder": "Filter by segment or name...",
+    "noResults": "No matching segments found",
+    "commissionRate": "COMMISSION_RATE",
+    "platformFee": "PLATFORM_FEE",
+    "status": {
+      "active": "ACTIVE",
+      "inactive": "INACTIVE"
+    },
+    "policyTitle": "Commission Policy",
+    "policyDescription": "The retainer percentages shown above represent the dynamic commission Revia retains from each successful repair request in that category. These rates are adjusted based on market complexity and platform operational load to ensure a sustainable expertise hub for all providers."
+  },
+  "Accounts": {
+    "title": "Account Management",
+    "subtitle": "Manage your team's access and roles",
+    "createButton": "Create Account",
+    "filterPlaceholder": "Filter by name, email or role...",
+    "noResults": "No personnel records found",
+    "columns": {
+      "member": "Team Member",
+      "role": "Role",
+      "contact": "Contact",
+      "lastActive": "Last Active",
+      "actions": "Actions"
+    },
+    "lastActive": "Last Active",
+    "neverActive": "Never Active",
+    "restore": "Restore Access",
+    "ban": "BAN_ACCOUNT",
+    "createModal": {
+      "title": "Create New Account",
+      "subtitle": "Set up user identity and access role",
+      "fullName": "Full Name",
+      "email": "Email Address",
+      "phone": "Phone Number",
+      "password": "Password",
+      "cancel": "Cancel",
+      "submit": "Create Account"
+    },
+    "confirmModal": {
+      "suspend": "Suspend Access?",
+      "restore": "Restore Access?",
+      "suspendSubtitle": "This user will lose access to the dashboard immediately. Their historical activity logs will be kept.",
+      "restoreSubtitle": "This team member will regain access with their previous role.",
+      "abort": "Abort",
+      "confirm": "Confirm"
+    },
+    "securityInfo": {
+      "title": "Access Control Security",
+      "description": "Owners have full control over settings and personnel. Staff accounts can only view and manage operational data. Deactivating an account does not delete its activity logs."
+    },
+    "messages": {
+      "createSuccess": "Account created successfully",
+      "createError": "Failed to create account",
+      "banSuccess": "Account banned successfully",
+      "unbanSuccess": "Account unbanned successfully",
+      "actionError": "Action failed"
+    }
+  },
+  "Subscription": {
+    "title": "Subscription Management",
+    "subtitle": "Scale your business with professional tools. Unlock AI-powered market analysis, trending reels insights, and automated customer support.",
+    "membership": "Membership",
+    "proPlan": "Pro Plan",
+    "fullAccess": "Full Platform Access",
+    "unlockFeatures": "Unlock all professional features",
+    "perDuration": "/ {days} days",
+    "includedFeatures": "Included Features",
+    "features": {
+      "aiRepair": "Access AI Repair Model: Get YouTube videos, get guides, and can send voice or text or image to help you in repair",
+      "support": "Premium Support Access"
+    },
+    "upgradeButton": "Upgrade to Pro",
+    "processing": "Processing",
+    "pendingPayment": "Payment Verification Pending",
+    "status": "Subscription Status",
+    "active": "Active Plan",
+    "expired": "Plan Expired",
+    "reference": "Subscription Reference",
+    "usage": "Usage & Validity",
+    "usageLabel": "Workflow Registry",
+    "daysRemaining": "{count} Days Remaining",
+    "currency": "EGP",
+    "activatedOn": "Activated On",
+    "expiresOn": "Expires On",
+    "actionRequired": "Action Required: Complete Payment",
+    "actionRequiredDesc": "Please contact administration to settle your {price} EGP payment. Your premium features will be unlocked immediately upon verification.",
+    "readyToScale": "Ready to Scale?",
+    "readyToScaleDesc": "You're currently using the limited version. Upgrade to Pro to access AI insights and premium business tools.",
+    "viewPlans": "View Plans",
+    "growthEngine": "AI-Powered Growth Engine",
+    "growthEngineDesc": "Access deep market analysis and trending reels insights powered by Revia's proprietary AI models.",
+    "premiumSupport": "Premium Support Tier",
+    "premiumSupportDesc": "Skip the queue with priority support and a dedicated business optimization manager.",
+    "messages": {
+      "requestSuccess": "Subscription requested successfully! Please proceed with payment.",
+      "alreadyExists": "You already have a pending or active subscription.",
+      "requestError": "Failed to request subscription",
+      "loadError": "Failed to load subscription information"
+    }
+  },
+  "Support": {
+    "title": "Support Center",
+    "titleAccent": "Help",
+    "subtitle": "Get help with technical issues and account inquiries.",
+    "newTicket": "New Ticket",
+    "filterPlaceholder": "Search by subject or ID...",
+    "totalActivity": "Total activity: {count} tickets found",
+    "noResults": "No support tickets found.",
+    "ourResponse": "Our Response",
+    "registeredDate": "Registered",
+    "modal": {
+      "title": "Create Support Ticket",
+      "subtitle": "Tell us what you need help with",
+      "subject": "Subject",
+      "subjectPlaceholder": "Briefly describe the issue...",
+      "priority": "Impact Level",
+      "message": "Message Details",
+      "messagePlaceholder": "Explain the issue or question in detail...",
+      "cancel": "Cancel",
+      "submit": "Submit Ticket",
+      "submitting": "Sending..."
+    },
+    "priorities": {
+      "LOW": "Low",
+      "MEDIUM": "Medium",
+      "HIGH": "High (Urgent)"
+    },
+    "status": {
+      "OPEN": "Open",
+      "IN_PROGRESS": "Processing",
+      "RESOLVED": "Resolved",
+      "CLOSED": "Closed"
+    },
+    "sidebar": {
+      "title": "Help Center",
+      "description": "Access strategic documentation and standardized response protocols for faster resolution.",
+      "guides": "Integration Guide",
+      "faq": "General FAQ"
+    }
+  },
+  "BrandChat": {
+    "title": "Revia Assistant",
+    "status": "AI Assistant Online",
+    "newSession": "New Session",
+    "enterprise": "Enterprise Edition",
+    "howCanIHelp": "How can I help your brand today?",
+    "intro": "Ask me about pricing strategies, market trends, or upload a photo of a device for repair advice.",
+    "prompts": {
+      "pricing": "How do I repair an iPhone 17 Pro Max screen?",
+      "marketing": "What tools do I need to replace a phone battery?",
+      "trends": "Show me step-by-step iPad screen repair instructions",
+      "complaint": "How do I fix a phone that won't charge?"
+    },
+    "restricted": {
+      "badge": "Restricted Access",
+      "title": "Revia Assistant is Locked",
+      "desc": "Unlock the power of Revia AI brainstorming assistant. Get instant insights, pricing strategies, and creative ideas for your business.",
+      "upgrade": "Upgrade to Pro"
+    },
+    "input": {
+      "placeholder": "Message Revia Assistant...",
+      "thinking": "AI is thinking..."
+    },
+    "disclaimer": "AI may produce inaccurate information about prices or models. Verify important details.",
+    "messages": {
+      "initError": "Failed to initialize Revia Assistant",
+      "sendError": "Failed to send message",
+      "subRequired": "Active subscription required",
+      "sessionSuccess": "New session started",
+      "sessionError": "Failed to start new session",
+      "confirmNew": "Start a fresh session? Current conversation will be saved in history."
+    }
+  },
+  "RepairDetails": {
+    "title": "Job Details",
+    "back": "Back to Requests",
+    "unitId": "Unit ID",
+    "logged": "Logged",
+    "status": "Job Status",
+    "phase1": "Phase 1: Request Details",
+    "hardwareProfile": "Hardware Profile",
+    "manufacturer": "Manufacturer",
+    "modelSpec": "Model Spec",
+    "osEnvironment": "OS Environment",
+    "requestedOn": "Requested On",
+    "issueDescription": "Issue Description",
+    "noDescription": "No Description Provided",
+    "aiInsight": "AI Insight",
+    "repairOffer": "Repair Offer",
+    "offerAccepted": "Offer Accepted",
+    "inspectionFee": "Inspection Fee",
+    "description": "Description",
+    "quoteRange": "Quote Range",
+    "estimatedCompletion": "Estimated Completion",
+    "offerSent": "Offer sent. Awaiting customer response.",
+    "technicalDiagnosis": "Technical Diagnosis",
+    "finalPrice": "Final Ledger Price",
+    "findingsReport": "Formal Findings Report",
+    "technicalImages": "Technical Images",
+    "loggedBy": "Logged By Master Technician",
+    "actionsTitle": "Actions",
+    "sendOffer": "Send Offer",
+    "awaitingResponse": "Awaiting Response",
+    "receiveInspection": "Receive Inspection Fee",
+    "submitDiagnosis": "Submit Diagnosis",
+    "receiveFinal": "Receive Final Payment",
+    "markFinished": "Mark Repair Finished",
+    "markCollected": "Mark Device Collected",
+    "alreadyHandled": "Already Handled",
+    "handledDesc": "This request was handled by another branch or provider.",
+    "repairCompleted": "Repair Completed",
+    "paymentHistory": "Payment History",
+    "jobTimeline": "Job Timeline",
+    "modals": {
+      "sendOffer": {
+        "title": "Send Repair Offer",
+        "subtitle": "Define your inspection fee and repair estimate",
+        "feeLabel": "Inspection Fee (EGP)",
+        "itemsLabel": "Repair Items",
+        "addItem": "Add Item",
+        "itemDesc": "Issue Description",
+        "minPrice": "Min Price",
+        "maxPrice": "Max Price",
+        "finishDate": "Expected Finish Date",
+        "submit": "Send Formal Offer",
+        "priceRangeError": "Max price cannot be less than min price"
+      },
+      "diagnosis": {
+        "title": "Technical Diagnosis",
+        "subtitle": "Finalizing technical findings Registry",
+        "notes": "Formal Findings Summary",
+        "finalPrice": "Final Ledger Balance (EGP)",
+        "submit": "Submit Findings"
+      },
+      "payment": {
+        "method": "Payment Method",
+        "cash": "Physical Cash",
+        "pos": "POS Terminal",
+        "submit": "Confirm Payment",
+        "amountToCollect": "Amount to Collect"
+      }
+    },
+    "statusLabels": {
+      "pending_brand_selection": "Brand Selection",
+      "pending_offers": "Pending Offers",
+      "offer_selected": "Offer Selected",
+      "inspection_pending": "Inspection Pending",
+      "payment_pending": "Payment Pending",
+      "pending_provider_repair": "Repairing",
+      "pending_user_device_pickup": "Ready for Pickup",
+      "completed": "Completed",
+      "ai_assessing": "AI Assessing",
+      "inspection_done": "Inspection Done",
+      "payment_done": "Payment Done",
+      "cancelled": "Cancelled"
+    },
+    "toasts": {
+      "offerSuccess": "Offer Transmitted Successfully",
+      "diagnosisSuccess": "Findings Logged Successfully",
+      "paymentSuccess": "Settlement Confirmed",
+      "finishSuccess": "Repair Status Finalized",
+      "pickupSuccess": "Handover Logged",
+      "error": "Something went wrong. Please try again."
+    },
+    "actions": {
+      "cancel": "Cancel"
+    },
+    "messages": {
+      "loadError": "Failed to load repair request",
+      "offerSuccess": "Offer sent successfully",
+      "offerError": "Failed to send offer",
+      "diagnosisSuccess": "Diagnosis submitted successfully",
+      "diagnosisError": "Failed to submit diagnosis",
+      "paymentSuccess": "Payment received successfully",
+      "paymentError": "Failed to record payment",
+      "finishSuccess": "Repair marked as finished",
+      "pickupSuccess": "Device marked as collected",
+      "actionError": "Failed to complete action"
+    }
+  }
+}

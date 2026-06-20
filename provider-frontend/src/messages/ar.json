@@ -1,0 +1,715 @@
+{
+  "Dashboard": {
+    "title": "نظرة عامة على لوحة القيادة",
+    "subtitle": "مقاييس الأداء في الوقت الفعلي والرؤى الاستراتيجية",
+    "synchronizing": "جاري مزامنة البيانات...",
+    "liveSync": "المزامنة المباشرة: نشطة",
+    "kpis": {
+      "walletBalance": "رصيد المحفظة",
+      "totalRevenue": "إجمالي الإيرادات",
+      "activeRepairs": "الإصلاحات النشطة",
+      "avgRating": "متوسط التقييم",
+      "locked": "محجوز",
+      "selectedPeriod": "في الفترة المختارة",
+      "completedAllTime": "مكتملة منذ البداية",
+      "fromReviews": "من {count} مراجعات",
+      "periods": {
+        "LAST_24_HOURS": "آخر 24 ساعة",
+        "LAST_7_DAYS": "آخر 7 أيام",
+        "LAST_30_DAYS": "آخر 30 يوم",
+        "ALL_TIME": "منذ البداية"
+      },
+      "status": {
+        "UP": "ارتفاع",
+        "DOWN": "انخفاض"
+      }
+    },
+    "revenueFlow": {
+      "title": "تدفق الإيرادات",
+      "credit": "له (إيداع)",
+      "debit": "عليه (سحب)",
+      "onlinePayments": "مدفوعات أونلاين",
+      "cashPos": "كاش / POS",
+      "totalPayouts": "إجمالي السحوبات",
+      "netRevenue": "صافي الإيرادات",
+      "grossVolume": "إجمالي الحجم",
+      "disbursed": "تم صرفه",
+      "noData": "لم يتم الكشف عن بيانات مالية"
+    },
+    "workflow": {
+      "title": "سجل سير العمل",
+      "directVolume": "حجم المباشر",
+      "aiAssisted": "بمساعدة الذكاء الاصطناعي",
+      "units": "وحدات",
+      "viewAll": "عرض كل النشاط"
+    },
+    "timeline": {
+      "title": "المخطط الزمني للطلبات",
+      "requests": "{count} طلبات",
+      "noActivity": "لا يوجد سجل نشاط"
+    },
+    "offers": {
+      "title": "ديناميكيات العروض",
+      "pending": "{count} قيد الانتظار",
+      "acceptanceMatrix": "مصفوفة القبول",
+      "strategicPipeline": "خط الأنابيب الاستراتيجي",
+      "sent": "تم الإرسال",
+      "avgInspection": "متوسط سعر الفحص",
+      "accepted": "تم القبول ({count})",
+      "rejected": "تم الرفض ({count})",
+      "distributionMatrix": "مصفوفة توزيع سير العمل"
+    },
+    "reviews": {
+      "title": "سجل المشاعر",
+      "count": "{count} تقييمات",
+      "evolution": "تطور التقييم",
+      "startPeriod": "بداية الفترة",
+      "latestUpdate": "آخر تحديث"
+    },
+    "subscription": {
+      "title": "حالة الترخيص",
+      "validity": "صالح حتى {date}",
+      "missing": "إدخال السجل مفقود",
+      "noPlan": "لا توجد خطة نشطة",
+      "opsWindow": "نافذة العمليات",
+      "cyclesRemaining": "تبقي {count} دورات"
+    },
+    "support": {
+      "title": "عمليات الدعم",
+      "openReqs": "{count} طلبات مفتوحة",
+      "inProgress": "قيد التنفيذ",
+      "resolved": "تم الحل",
+      "highPriority": "بروتوكول أولوية عالية"
+    },
+    "nodes": {
+      "reviaAssistant": "مساعد ريفيا",
+      "messagingNode": "عقدة المراسلة الموحدة",
+      "assetLedger": "دفتر الأصول",
+      "capitalDisbursement": "صرف رأس المال",
+      "operations": "العمليات",
+      "serviceRegistry": "مركز سجل الخدمة",
+      "brandIdentity": "هوية العلامة التجارية",
+      "profileReputation": "الملف الشخصي والسمعة"
+    },
+    "systemConfig": "الوصول إلى تكوين النظام"
+  },
+  "Navigation": {
+    "dashboard": "لوحة القيادة",
+    "brand": "العلامة التجارية",
+    "categories": "التصنيفات",
+    "accounts": "الحسابات",
+    "payouts": "المدفوعات",
+    "repairRequests": "طلبات الإصلاح",
+    "reels": "مقاطع الريلز",
+    "settings": "الإعدادات",
+    "subscription": "الاشتراك",
+    "reviaAssistant": "مساعد ريفيا",
+    "support": "الدعم",
+    "platform": "المنصة",
+    "logout": "تسجيل الخروج"
+  },
+  "Common": {
+    "loading": "جاري التحميل...",
+    "error": "خطأ",
+    "save": "حفظ",
+    "cancel": "إلغاء",
+    "viewDetails": "عرض التفاصيل",
+    "registered": "مسجل"
+  },
+  "RepairRequests": {
+    "title": "طلبات الخدمة",
+    "subtitle": "تتبع وإدارة مهام إصلاح العملاء",
+    "refresh": "تحديث القائمة",
+    "noData": "لم يتم العثور على طلبات إصلاح في هذا القسم.",
+    "generic": "عام",
+    "terminal": "محطة",
+    "viewDetails": "عرض التفاصيل",
+    "registered": "مسجل",
+    "tabs": {
+      "active": "الطلبات النشطة",
+      "pending": "العروض المعلقة"
+    },
+    "status": {
+      "operational": "عملي",
+      "synced": "تم مزامنة السجل"
+    },
+    "statusLabels": {
+      "ai_assessing": "التقييم",
+      "pending_brand_selection": "الاختيار",
+      "pending_offers": "تقديم العروض",
+      "offer_selected": "تم قبول العرض",
+      "inspection_pending": "التشخيص",
+      "inspection_done": "تم التشخيص",
+      "payment_pending": "انتظار الدفع",
+      "payment_done": "تم الدفع",
+      "pending_provider_repair": "قيد الإصلاح",
+      "pending_user_device_pickup": "جاهز للاستلام",
+      "completed": "مكتمل",
+      "cancelled": "ملغي"
+    }
+  },
+  "Brand": {
+    "title": "هوية العلامة التجارية",
+    "subtitle": "إدارة فروعك وإعدادات الشركة",
+    "refresh": "تحديث",
+    "noData": "لا توجد بيانات متاحة",
+    "generic": "العلامة التجارية",
+    "terminal": "الهوية",
+    "tabs": {
+      "brand": "تفاصيل العلامة التجارية",
+      "branches": "الفروع ({count})",
+      "reviews": "تقييمات العملاء"
+    },
+    "status": {
+      "verified": "مزود معتمد",
+      "network": "شبكة الفروع",
+      "profile": "ملف شخصي معتمد",
+      "account": "حساب مزود معتمد",
+      "operational": "عملي",
+      "system": "حالة النظام"
+    },
+    "labels": {
+      "crn": "رقم السجل التجاري",
+      "tin": "الرقم الضريبي",
+      "rating": "التقييم",
+      "history": "سجل الخدمة",
+      "jobs": "{count} مهام",
+      "legal": "الهوية القانونية",
+      "nameEn": "اسم العلامة التجارية (EN)",
+      "nameAr": "الاسم بالعربي",
+      "expertise": "خبرة الخدمة",
+      "operations": "العمليات",
+      "pos": "مدفوعات البطاقة في الموقع (POS)",
+      "posDesc": "مدفوعات الماكينة في الفروع.",
+      "liveOp": "عملية مباشرة",
+      "liveOpDesc": "يسمح باستلام المهام فوراً.",
+      "placeholderEn": "الاسم بالإنجليزية",
+      "placeholderAr": "الاسم بالعربية",
+      "legalId": "المعرف القانوني",
+      "preciseMap": "إحداثيات الخريطة الدقيقة"
+    },
+    "actions": {
+      "save": "حفظ التغييرات",
+      "saving": "جاري الحفظ...",
+      "addBranch": "إضافة فرع",
+      "editBranch": "تعديل الفرع",
+      "newBranch": "فرع جديد",
+      "discard": "تجاهل",
+      "saveSuccess": "تم حفظ إعدادات العلامة التجارية بنجاح"
+    },
+    "noDataContent": {
+      "branches": "شبكتك تنتظر",
+      "branchesDesc": "أضف مواقع فعليّة للبدء في تلقي طلبات الإصلاح بناءً على الموقع.",
+      "reviews": "السكوت من ذهب",
+      "reviewsDesc": "لم يتم تسجيل أي تعليقات من المجتمع بعد."
+    },
+    "reviews": {
+      "anonymous": "مجهول",
+      "recent": "النشاط الأخير",
+      "noComment": "لم يتم تقديم ملاحظات إضافية."
+    },
+    "branch": {
+      "active": "نشط",
+      "inactive": "غير نشط",
+      "location": "موقع الفرع"
+    }
+  },
+  "Payouts": {
+    "title": "مركز المدفوعات",
+    "subtitle": "سجل المعاملات",
+    "requestPayout": "طلب سحب",
+    "syncError": "تعذر مزامنة بيانات المحفظة",
+    "availableBalance": "رصيد السحب المتاح",
+    "verifiedEarnings": "الأرباح المعتمدة",
+    "gatewayActive": "البوابة نشطة",
+    "verifiedData": "بيانات معتمدة",
+    "lockedBalance": "الرصيد المحجوز",
+    "lockedDesc": "يتم حجز الرصيد أثناء المعاملات النشطة أو للتحقق لمدة 24 ساعة.",
+    "currency": "ج.م",
+    "transactions": {
+      "title": "سجل المعاملات",
+      "subtitle": "سجل مفصل",
+      "description": "الوصف",
+      "amount": "المبلغ",
+      "postState": "الحالة اللاحقة",
+      "date": "التاريخ",
+      "noTransactions": "لم يتم الكشف عن معاملات",
+      "amountLabel": "المبلغ (ج.م)",
+      "runningBalance": "الرصيد الجاري"
+    },
+    "settlement": {
+      "title": "التسوية",
+      "subtitle": "حالة السحب",
+      "noPayouts": "لم يتم العثور على طلبات سحب."
+    },
+    "status": {
+      "pending": "قيد الانتظار",
+      "approved": "تمت الموافقة",
+      "rejected": "مرفوض",
+      "processed": "تمت المعالجة",
+      "sent": "تم الإرسال"
+    },
+    "modal": {
+      "title": "طلب سحب",
+      "subtitle": "أدخل تفاصيل السحب أدناه",
+      "withdrawalAmount": "مبلغ السحب",
+      "balance": "الرصيد: {amount} ج.م",
+      "minAmountError": "الحد الأدنى لمبلغ السحب هو 50 ج.م",
+      "insufficientBalance": "تحقق من رصيدك المتاح",
+      "methods": {
+        "instapay": "إنستا باي (InstaPay)",
+        "bank": "تحويل بنكي",
+        "wallet": "محفظة إلكترونية"
+      },
+      "instapay": {
+        "address": "عنوان إنستا باي",
+        "placeholder": "USERNAME@INSTAPAY",
+        "error": "يجب أن يكون معرف IPA بين 3 و 100 حرف"
+      },
+      "bank": {
+        "name": "اسم البنك",
+        "placeholderName": "مثال: CIB, QNB, HSBC",
+        "iban": "رقم الآيبان (IBAN)",
+        "ibanPlaceholder": "EG00 0000 0000 0000 0000 0000 000",
+        "ibanError": "يجب أن يكون رقم الآيبان مصرياً صالحاً (EG + 25 رقماً)",
+        "accountNumber": "رقم الحساب",
+        "accountNumberPlaceholder": "100XXXXXXXX",
+        "accountNumberError": "رقم الحساب يتجاوز 30 حرفاً",
+        "holderName": "اسم صاحب الحساب",
+        "holderPlaceholder": "الاسم الكامل كما في البنك",
+        "bankNameError": "اسم البنك يجب أن يكون بين 2 و 100 حرف"
+      },
+      "wallet": {
+        "provider": "مزود المحفظة",
+        "selectProvider": "اختر المزود",
+        "phoneNumber": "رقم الهاتف",
+        "phonePlaceholder": "01XXXXXXXXX",
+        "phoneError": "يجب أن يكون رقم الهاتف 11 رقماً بالضبط",
+        "holderName": "اسم صاحب المحفظة",
+        "holderPlaceholder": "الاسم الكامل لمالك المحفظة",
+        "providerError": "اختر مزود المحفظة"
+      },
+      "holderNameError": "اسم صاحب الحساب يجب أن يكون بين 2 و 100 حرف",
+      "submit": "تقديم الطلب",
+      "submitting": "جاري التقديم...",
+      "cancel": "إلغاء",
+      "success": "تم تقديم طلب السحب بنجاح",
+      "fail": "فشل تقديم الطلب"
+    }
+  },
+  "Reels": {
+    "title": "مقاطع الفيديو (Reels)",
+    "subtitle": "إدارة المقاطع والتفاعل",
+    "status": {
+      "sync": "تمت مزامنة البيانات",
+      "published": "تم نشر {count} مقاطع",
+      "visible": "مرئي",
+      "hidden": "مخفي"
+    },
+    "actions": {
+      "upload": "رفع مقطع",
+      "uploadNow": "رفع الآن",
+      "createFirst": "إنشاء أول مقطع",
+      "hide": "إخفاء",
+      "publish": "نشر",
+      "cancel": "إلغاء",
+      "saveChanges": "حفظ التغييرات",
+      "close": "إغلاق"
+    },
+    "noData": {
+      "title": "لم يتم العثور على مقاطع",
+      "desc": "ارفع أول فيديو لك للبدء في التفاعل مع العملاء"
+    },
+    "labels": {
+      "noPreview": "المعاينة غير متاحة",
+      "untitled": "مقطع بدون عنوان",
+      "uploadTitle": "رفع مقطع",
+      "uploadDesc": "إضافة محتوى فيديو جديد إلى لوحة القيادة",
+      "uploadVideo": "رفع ملف فيديو",
+      "uploadHint": "MP4, MOV // الحد الأقصى: 10 ميجابايت",
+      "ready": "جاهز",
+      "captionEn": "الوصف (EN)",
+      "captionAr": "الوصف (AR)",
+      "captionPlaceholderEn": "أدخل الوصف بالإنجليزية...",
+      "captionPlaceholderAr": "اكتب الوصف بالعربية...",
+      "editTitle": "تعديل تفاصيل المقطع",
+      "editDesc": "تحديث معلومات المعرف: {id}",
+      "visibility": "الظهور",
+      "visibilityDesc": "اختر ما إذا كان هذا المقطع مرئياً للعملاء.",
+      "reelDetails": "تفاصيل المقطع",
+      "totalLikes": "إجمالي الإعجابات",
+      "totalViews": "إجمالي المشاهدات",
+      "totalShares": "إجمالي المشاركات",
+      "reelId": "معرف المقطع",
+      "capturedAt": "تم الالتقاط في",
+      "statusLabel": "الحالة",
+      "mediaUnavailable": "الوسائط غير متاحة",
+      "category": "الفئة",
+      "categoryLaptop": "لابتوب",
+      "categoryMobile": "موبايل",
+      "type": "نوع المقطع",
+      "typeTutorial": "شرح إصلاح",
+      "typeGeneral": "محتوى عام",
+      "deviceName": "اسم الجهاز",
+      "deviceNamePlaceholder": "مثال: ايفون 15 برو",
+      "repairType": "نوع الإصلاح",
+      "repairScreen": "استبدال شاشة",
+      "repairBattery": "صيانة البطارية",
+      "repairHardware": "إصلاح هاردوير",
+      "repairSoftware": "سوفتوير / نظام"
+    },
+    "messages": {
+      "selectVideo": "يرجى اختيار ملف فيديو",
+      "videoTooLarge": "حجم الفيديو كبير جداً ({size} ميجابايت). الحد الأقصى المسموح به هو 10 ميجابايت.",
+      "createSuccess": "تم إنشاء المقطع بنجاح!",
+      "createFail": "فشل إنشاء المقطع",
+      "updateSuccess": "تم تحديث المقطع!",
+      "updateFail": "فشل تحديث المقطع",
+      "deleteConfirm": "هل أنت متأكد أنك تريد حذف هذا المقطع؟",
+      "deleteSuccess": "تم حذف المقطع",
+      "deleteFail": "فشل حذف المقطع",
+      "visibilitySuccess": "المقطع الآن {status}",
+      "visibilityFail": "فشل في تغيير حالة الظهور"
+    }
+  },
+  "Settings": {
+    "title": "إعدادات الحساب",
+    "subtitle": "إدارة ملفك الشخصي وتكوينات الأمان",
+    "status": {
+      "active": "حالة الحساب: نشط",
+      "authorized": "الجلسة: مفوضة"
+    },
+    "tabs": {
+      "profile": "بيانات الملف",
+      "preferences": "التفضيلات",
+      "notifications": "الإشعارات"
+    },
+    "profile": {
+      "title": "هوية الحساب",
+      "desc": "إدارة ملفك الإداري وهويتك",
+      "fullName": "الاسم الكامل",
+      "email": "البريد الإلكتروني",
+      "phone": "رقم الهاتف (مؤمن)",
+      "phoneDesc": "تمنع أقفال القياسات الحيوية والأجهزة التغيير المباشر للقناة.",
+      "save": "حفظ التغييرات"
+    },
+    "preferences": {
+      "title": "تفضيلات النظام",
+      "desc": "تفضيلات الواجهة العامة واللغة.",
+      "language": "اللغة",
+      "currency": "العملة",
+      "interfaceMode": "وضع الواجهة",
+      "interfaceDesc": "التبديل بين الثيمات الفاتحة والداكنة.",
+      "lightMode": "الوضع الفاتح",
+      "darkMode": "الوضع الداكن"
+    },
+    "notifications": {
+      "title": "قنوات الإشعارات",
+      "desc": "إدارة كيفية تلقي التنبيهات والتحديثات.",
+      "email": {
+        "title": "تنبيهات البريد",
+        "desc": "تحديثات الحساب والتقارير الشهرية."
+      },
+      "push": {
+        "title": "إشعارات المتصفح",
+        "desc": "إشعارات المتصفح في الوقت الفعلي."
+      },
+      "service": {
+        "title": "تنبيهات الخدمة",
+        "desc": "احصل على إشعار عند وصول طلبات إصلاح جديدة."
+      },
+      "marketing": {
+        "title": "التسويق",
+        "desc": "تحديثات اختيارية للميزات والنمو."
+      }
+    },
+    "messages": {
+      "updateSuccess": "تم تحديث الإعدادات بنجاح",
+      "updateError": "فشل تحديث الإعدادات"
+    }
+  },
+  "Categories": {
+    "title": "أقسام الخدمة",
+    "subtitle": "إدارة أقسام الخدمة المؤهلة ومعدلات عمولة المنصة",
+    "activeCategories": "{count} أقسام_نشطة",
+    "filterPlaceholder": "تصفية حسب القسم أو الاسم...",
+    "noResults": "لم يتم العثور على أقسام مطابقة",
+    "commissionRate": "معدل_العمولة",
+    "platformFee": "رسوم_المنصة",
+    "status": {
+      "active": "نشط",
+      "inactive": "غير نشط"
+    },
+    "policyTitle": "سياسة العمولة",
+    "policyDescription": "تمثل نسب الاحتجاز الموضحة أعلاه العمولة الديناميكية التي تحتفظ بها ريفيا من كل طلب إصلاح ناجح في تلك الفئة. يتم تعديل هذه المعدلات بناءً على تعقيد السوق وحمل تشغيل المنصة لضمان استدامة مركز الخبرة لجميع المزودين."
+  },
+  "Accounts": {
+    "title": "إدارة الحسابات",
+    "subtitle": "إدارة وصول فريقك وأدوارهم",
+    "createButton": "إنشاء حساب",
+    "filterPlaceholder": "تصفية حسب الاسم، البريد أو الدور...",
+    "noResults": "لم يتم العثور على سجلات موظفين",
+    "columns": {
+      "member": "عضو الفريق",
+      "role": "الدور",
+      "contact": "التواصل",
+      "lastActive": "آخر نشاط",
+      "actions": "الإجراءات"
+    },
+    "lastActive": "آخر نشاط",
+    "neverActive": "لم ينشط أبداً",
+    "restore": "استعادة الوصول",
+    "ban": "حظر_الحساب",
+    "createModal": {
+      "title": "إنشاء حساب جديد",
+      "subtitle": "إعداد هوية المستخدم ودور الوصول",
+      "fullName": "الاسم الكامل",
+      "email": "البريد الإلكتروني",
+      "phone": "رقم الهاتف",
+      "password": "كلمة المرور",
+      "cancel": "إلغاء",
+      "submit": "إنشاء الحساب"
+    },
+    "confirmModal": {
+      "suspend": "تعليق الوصول؟",
+      "restore": "استعادة الوصول؟",
+      "suspendSubtitle": "سيفقد هذا المستخدم جميع اتصالات لوحة التحكم على الفور. سيتم الاحتفاظ بالسجلات التاريخية.",
+      "restoreSubtitle": "سيستعيد الموظفون اتصال النظام الكامل ضمن بارامترات أدوارهم المصرح بها.",
+      "abort": "إجهاض",
+      "confirm": "تأكيد"
+    },
+    "securityInfo": {
+      "title": "أمان التحكم في الوصول",
+      "description": "يتمتع المالكون بأذونات تدميرية كاملة. تقتصر حسابات الموظفين على البيانات التشغيلية. حظر الحساب لا يحذف سجلات نشاطه التاريخية."
+    },
+    "messages": {
+      "createSuccess": "تم إنشاء الحساب بنجاح",
+      "createError": "فشل إنشاء الحساب",
+      "banSuccess": "تم حظر الحساب بنجاح",
+      "unbanSuccess": "تم إلغاء حظر الحساب بنجاح",
+      "actionError": "فشلت العملية"
+    }
+  },
+  "Subscription": {
+    "title": "إدارة الاشتراك",
+    "subtitle": "وسع نطاق عملك باستخدام أدوات احترافية. افتح تحليل السوق المدعوم بالذكاء الاصطناعي، ورؤى الريلز الشائعة، ودعم العملاء الآلي.",
+    "membership": "العضوية",
+    "proPlan": "خطة برو",
+    "fullAccess": "وصول كامل للمنصة",
+    "unlockFeatures": "افتح جميع الميزات الاحترافية",
+    "perDuration": "/ {days} يوم",
+    "includedFeatures": "الميزات المضمنة",
+    "features": {
+      "aiRepair": "الوصول لنموذج الإصلاح بالذكاء الاصطناعي: احصل على فيديوهات يوتيوب، وكتيبات إرشادية، وأرسل صوتاً أو نصاً أو صوراً لمساعدتك في الإصلاح",
+      "support": "وصول للدعم المتميز"
+    },
+    "upgradeButton": "ترقية إلى برو",
+    "processing": "جاري المعالجة",
+    "pendingPayment": "في انتظار التحقق من الدفع",
+    "status": "حالة الاشتراك",
+    "active": "خطة نشطة",
+    "expired": "انتهت الخطة",
+    "reference": "مرجع الاشتراك",
+    "usage": "الاستخدام والصلاحية",
+    "usageLabel": "سجل سير العمل",
+    "daysRemaining": "متبقي {count} يوم",
+    "currency": "ج.م",
+    "activatedOn": "تم التنشيط في",
+    "expiresOn": "ينتهي في",
+    "actionRequired": "إجراء مطلوب: إكمال الدفع",
+    "actionRequiredDesc": "يرجى الاتصال بالإدارة لتسوية مبلغ {price} جنيهاً مصرياً. سيتم فتح ميزاتك المتميزة فور التحقق.",
+    "readyToScale": "جاهز للتوسع؟",
+    "readyToScaleDesc": "أنت تستخدم النسخة المحدودة حالياً. قم بالترقية إلى برو للوصول إلى رؤى الذكاء الاصطناعي وأدوات العمل المتميزة.",
+    "viewPlans": "عرض الخطط",
+    "growthEngine": "محرك نمو مدعوم بالذكاء الاصطناعي",
+    "growthEngineDesc": "الوصول إلى تحليل عميق للسوق ورؤى الريلز الشائعة المدعومة بنماذج الذكاء الاصطناعي الخاصة بـ ريفيا.",
+    "premiumSupport": "فئة الدعم المتميز",
+    "premiumSupportDesc": "تجاوز الدور مع الدعم ذو الأولوية ومدير تحسين الأعمال المخصص.",
+    "messages": {
+      "requestSuccess": "تم طلب الاشتراك بنجاح! يرجى المتابعة مع الدفع.",
+      "alreadyExists": "لديك بالفعل اشتراك معلق أو نشط.",
+      "requestError": "فشل طلب الاشتراك",
+      "loadError": "فشل تحميل معلومات الاشتراك"
+    }
+  },
+  "Support": {
+    "title": "مركز الدعم",
+    "titleAccent": "العمليات",
+    "subtitle": "مركز المساعدة الفنية والاستفسارات التشغيلية",
+    "newTicket": "تذكرة جديدة",
+    "filterPlaceholder": "بحث حسب الموضوع أو المعرف...",
+    "totalActivity": "إجمالي النشاط: تم العثور على {count} تذاكر",
+    "noResults": "لم يتم العثور على تذاكر دعم.",
+    "ourResponse": "ردنا",
+    "registeredDate": "مسجل",
+    "modal": {
+      "title": "فتح حالة دعم",
+      "subtitle": "تهيئة بروتوكول الاستجابة الفنية",
+      "subject": "الموضوع",
+      "subjectPlaceholder": "ملخص استفسارك...",
+      "priority": "مستوى التأثير",
+      "message": "تفاصيل الرسالة",
+      "messagePlaceholder": "وصف مفصل للمشكلة أو الطلب...",
+      "cancel": "إلغاء",
+      "submit": "إرسال التذكرة",
+      "submitting": "جاري الإرسال..."
+    },
+    "priorities": {
+      "LOW": "تأثير منخفض",
+      "MEDIUM": "تشغيلي متوسط",
+      "HIGH": "حرج / P0"
+    },
+    "status": {
+      "OPEN": "مفتوح",
+      "IN_PROGRESS": "قيد المعالجة",
+      "RESOLVED": "تم الحل",
+      "CLOSED": "مغلق"
+    },
+    "sidebar": {
+      "title": "مركز المساعدة",
+      "description": "الوصول إلى الوثائق الاستراتيجية وبروتوكولات الاستجابة الموحدة لحل أسرع.",
+      "guides": "دليل التكامل",
+      "faq": "الأسئلة الشائعة"
+    }
+  },
+  "BrandChat": {
+    "title": "مساعد ريفيا",
+    "status": "مساعد الذكاء الاصطناعي متاح",
+    "newSession": "جلسة جديدة",
+    "enterprise": "إصدار المؤسسات",
+    "howCanIHelp": "كيف يمكنني مساعدة علامتك التجارية اليوم؟",
+    "intro": "اسألني عن استراتيجيات التسعير، اتجاهات السوق، أو ارفع صورة لجهاز للحصول على نصيحة إصلاح.",
+    "prompts": {
+      "pricing": "كيف أصلح شاشة آيفون 17 برو ماكس؟",
+      "marketing": "ما الأدوات التي أحتاجها لتغيير بطارية الهاتف؟",
+      "trends": "أرشدني خطوة بخطوة لإصلاح شاشة آيباد",
+      "complaint": "كيف أصلح هاتفاً لا يشحن؟"
+    },
+    "restricted": {
+      "badge": "وصول محدود",
+      "title": "مساعد ريفيا مقفل",
+      "desc": "افتح قوة مساعد العصف الذهني ريفيا بالذكاء الاصطناعي. احصل على رؤى فورية، استراتيجيات تسعير، وأفكار إبداعية لعملك.",
+      "upgrade": "ترقية إلى برو"
+    },
+    "input": {
+      "placeholder": "أرسل رسالة لمساعد ريفيا...",
+      "thinking": "الذكاء الاصطناعي يفكر..."
+    },
+    "disclaimer": "قد ينتج الذكاء الاصطناعي معلومات غير دقيقة حول الأسعار أو الموديلات. تحقق من التفاصيل الهامة.",
+    "messages": {
+      "initError": "فشل تهيئة مساعد ريفيا",
+      "sendError": "فشل إرسال الرسالة",
+      "subRequired": "يتطلب اشتراكاً نشطاً",
+      "sessionSuccess": "بدأت جلسة جديدة",
+      "sessionError": "فشل بدء جلسة جديدة",
+      "confirmNew": "بدء جلسة جديدة؟ سيتم حفظ المحادثة الحالية في السجل."
+    }
+  },
+  "RepairDetails": {
+    "title": "تفاصيل المهمة",
+    "back": "العودة إلى الطلبات",
+    "unitId": "رقم الوحدة",
+    "logged": "تم التسجيل",
+    "status": "حالة المهمة",
+    "phase1": "المرحلة 1: تفاصيل الطلب",
+    "hardwareProfile": "ملف الأجهزة",
+    "manufacturer": "الشركة المصنعة",
+    "modelSpec": "مواصفات الموديل",
+    "osEnvironment": "بيئة نظام التشغيل",
+    "requestedOn": "تم الطلب في",
+    "issueDescription": "وصف المشكلة",
+    "noDescription": "لم يتم تقديم وصف",
+    "aiInsight": "رؤية الذكاء الاصطناعي",
+    "repairOffer": "عرض الإصلاح",
+    "offerAccepted": "تم قبول العرض",
+    "inspectionFee": "رسوم الفحص",
+    "description": "الوصف",
+    "quoteRange": "نطاق السعر",
+    "estimatedCompletion": "الإكمال المتوقع",
+    "offerSent": "تم إرسال العرض. في انتظار رد العميل.",
+    "technicalDiagnosis": "التشخيص الفني",
+    "finalPrice": "سعر السجل النهائي",
+    "findingsReport": "تقرير النتائج الرسمي",
+    "technicalImages": "الصور الفنية",
+    "loggedBy": "تم التسجيل بواسطة كبير الفنيين",
+    "actionsTitle": "الإجراءات",
+    "sendOffer": "إرسال عرض",
+    "awaitingResponse": "في انتظار الرد",
+    "receiveInspection": "استلام رسوم الفحص",
+    "submitDiagnosis": "تقديم التشخيص",
+    "receiveFinal": "استلام الدفع النهائي",
+    "markFinished": "تحديد الإصلاح كمكتمل",
+    "markCollected": "تحديد الجهاز كمستلم",
+    "alreadyHandled": "تمت معالجته بالفعل",
+    "handledDesc": "تمت معالجة هذا الطلب من قبل فرع أو مزود آخر.",
+    "repairCompleted": "اكتمل الإصلاح",
+    "paymentHistory": "سجل الدفع",
+    "jobTimeline": "الجدول الزمني للمهمة",
+    "modals": {
+      "sendOffer": {
+        "title": "إرسال عرض إصلاح",
+        "subtitle": "حدد رسوم الفحص وتقدير الإصلاح",
+        "feeLabel": "رسوم الفحص (ج.م)",
+        "itemsLabel": "بنود الإصلاح",
+        "addItem": "إضافة بند",
+        "itemDesc": "وصف المشكلة",
+        "minPrice": "أقل سعر",
+        "maxPrice": "أقصى سعر",
+        "finishDate": "تاريخ الانتهاء المتوقع",
+        "submit": "إرسال العرض الرسمي",
+        "priceRangeError": "لا يمكن أن يكون السعر الأقصى أقل من السعر الأدنى"
+      },
+      "diagnosis": {
+        "title": "التشخيص الفني",
+        "subtitle": "نهائي سجل النتائج الفنية",
+        "notes": "ملخص النتائج الرسمية",
+        "finalPrice": "الرصيد النهائي (ج.م)",
+        "submit": "إرسال النتائج"
+      },
+      "payment": {
+        "method": "طريقة الدفع",
+        "cash": "نقدي / يدوي",
+        "pos": "ماكينة دفع (POS)",
+        "submit": "تأكيد الدفع",
+        "amountToCollect": "المبلغ المطلوب تحصيله"
+      }
+    },
+    "statusLabels": {
+      "pending_brand_selection": "الاختيار",
+      "pending_offers": "في انتظار العروض",
+      "offer_selected": "تم اختيار العرض",
+      "inspection_pending": "في انتظار الفحص",
+      "payment_pending": "في انتظار الدفع",
+      "pending_provider_repair": "جاري الإصلاح",
+      "pending_user_device_pickup": "جاهز للاستلام",
+      "completed": "تم الانتهاء",
+      "ai_assessing": "تحليل الذكاء الاصطناعي",
+      "inspection_done": "اكتمل الفحص",
+      "payment_done": "تم الدفع",
+      "cancelled": "ملغي"
+    },
+    "toasts": {
+      "offerSuccess": "تم إرسال العرض بنجاح",
+      "diagnosisSuccess": "تم تسجيل النتائج بنجاح",
+      "paymentSuccess": "تم تأكيد التسوية",
+      "finishSuccess": "تم تحديث حالة الإصلاح",
+      "pickupSuccess": "تم تسجيل التسليم",
+      "error": "خرق البروتوكول: فشلت العملية"
+    },
+    "actions": {
+      "cancel": "إلغاء العملية"
+    },
+    "messages": {
+      "loadError": "فشل تحميل طلب الإصلاح",
+      "offerSuccess": "تم إرسال العرض بنجاح",
+      "offerError": "فشل إرسال العرض",
+      "diagnosisSuccess": "تم تقديم التشخيص بنجاح",
+      "diagnosisError": "فشل تقديم التشخيص",
+      "paymentSuccess": "تم استلام الدفع بنجاح",
+      "paymentError": "فشل تسجيل الدفع",
+      "finishSuccess": "تم تحديد الإصلاح كمكتمل",
+      "pickupSuccess": "تم تحديد الجهاز كمستلم",
+      "actionError": "فشل إكمال الإجراء"
+    }
+  }
+}

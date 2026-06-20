@@ -1,0 +1,443 @@
+{
+  "navbar": {
+    "about": "About",
+    "features": "Features",
+    "howItWorks": "How it Works",
+    "blog": "Blog"
+  },
+  "hero": {
+    "badge": "AI-Powered Device Repair",
+    "title": "Professional Tech Repair, AI-Powered Accuracy.",
+    "subtitle": "Diagnose your device in minutes, compare trusted technicians near you, and track every repair step in real time.",
+    "cta": "Start Free Diagnosis",
+    "trust": "Supporting repairs for"
+  },
+  "problem": {
+    "badge": "The Old Way",
+    "title": "Device repair shouldn't be a gamble",
+    "items": [
+      "Hidden costs and surprise fees",
+      "No idea when it will be ready",
+      "Worrying about original parts",
+      "Unclear warranty terms"
+    ]
+  },
+  "problem_section": {
+    "badge": "The Problem",
+    "title": "Why Device Repairs Feel Risky",
+    "subtitle": "You’re forced to trust without clarity. That’s broken.",
+    "cards": [
+      {
+        "title": "Hidden Costs",
+        "description": "Vague estimates that double by the time you pick up your device."
+      },
+      {
+        "title": "Long Wait Times",
+        "description": "Days of silence while your device sits on a shelf gathering dust."
+      },
+      {
+        "title": "Unnecessary Repairs",
+        "description": "Paying for parts that weren't broken, because you can't see the 'why'."
+      },
+      {
+        "title": "Pressure and Uncertainty",
+        "description": "The stress of handing over your data to someone you don't know."
+      }
+    ]
+  },
+  "features_section": {
+    "badge": "Features",
+    "title": "What Makes Revia Different",
+    "subtitle": "We've combined expert craftsmanship with modern technology to redefine the repair experience.",
+    "cards": [
+      {
+        "badge": "EXPERTISE",
+        "title": "Expert Technicians",
+        "description": "Our experts use trusted repair methods and precise diagnostics for reliable device care."
+      },
+      {
+        "badge": "EXPRESS",
+        "title": "Fast Turnaround",
+        "description": "Most repairs are completed the same day, with many ready in as little as 1–2 hours."
+      },
+      {
+        "badge": "RELIABLE",
+        "title": "Premium Parts",
+        "description": "We use quality parts to ensure long-lasting performance and dependable outcomes."
+      },
+      {
+        "badge": "TRUSTWORTHY",
+        "title": "Transparent & Honest",
+        "description": "Clear communication, no hidden fees, and free diagnostics so you know what to expect."
+      },
+      {
+        "badge": "MULTI-BRAND",
+        "title": "Wide Brand Range",
+        "description": "We support a broad range of devices across all major tech brands and manufacturers."
+      },
+      {
+        "badge": "PROTECTED",
+        "title": "Warranty Included",
+        "description": "Every repair comes with a full warranty for added confidence and peace of mind."
+      }
+    ]
+  },
+  "solution": {
+    "badge": "The Revia Way",
+    "title": "Transparent, fast, and guaranteed",
+    "items": [
+      "AI diagnosis gives you exact pricing upfront",
+      "Live tracking of your device status",
+      "Verified technicians and 100% genuine parts",
+      "90-day warranty on all repairs"
+    ]
+  },
+  "howItWorks": {
+    "badge": "Process",
+    "title": "How Revia Works",
+    "subtitle": "Four simple steps to get your device back to perfect condition.",
+    "steps": [
+      {
+        "title": "Free AI Diagnosis",
+        "description": "Answer a few quick questions. Our AI instantly identifies the likely issue."
+      },
+      {
+        "title": "Instant Fixed Quote",
+        "description": "See the exact price and repair timeline immediately. No surprises."
+      },
+      {
+        "title": "Live Tracking",
+        "description": "Drop off your device and track every step of the repair process online."
+      },
+      {
+        "title": "Ready & Guaranteed",
+        "description": "Pick up your fixed device backed by our 90-day comprehensive warranty."
+      }
+    ]
+  },
+  "trust": {
+    "title": "Your device is in safe hands",
+    "subtitle": "We've built a repair process you can actually trust.",
+    "features": [
+      {
+        "title": "AI Diagnosis",
+        "description": "Pinpoint accuracy before we even touch your device."
+      },
+      {
+        "title": "Live Tracking",
+        "description": "Watch your device move through our lab in real-time."
+      },
+      {
+        "title": "90-Day Warranty",
+        "description": "Comprehensive protection on all replaced parts."
+      }
+    ]
+  },
+  "evidence": {
+    "title": "See the difference",
+    "description": "Every repair comes with a detailed, digital report. You know exactly what was fixed, the parts used, and the quality tests performed.",
+    "points": [
+      "Photographic evidence of the repair",
+      "List of verified genuine parts used",
+      "Multi-point quality inspection sign-off"
+    ]
+  },
+  "whatWeRepair": {
+    "badge": "Devices",
+    "title": "What We Repair",
+    "subtitle": "From smartphones to smartwatches, we provide expert repairs for all your essential tech.",
+    "categories": [
+      {
+        "title": "Smartphones",
+        "description": "Screens, batteries, ports."
+      },
+      {
+        "title": "Tablets & iPads",
+        "description": "Displays, batteries, charging."
+      },
+      {
+        "title": "Laptops",
+        "description": "Keyboards, screens, software."
+      },
+      {
+        "title": "Smartwatches",
+        "description": "Straps, screens, battery."
+      },
+      {
+        "title": "Desktop PCs",
+        "description": "Diagnostics and component repairs."
+      },
+      {
+        "title": "MacBooks & iMacs",
+        "description": "Logic board and display issues."
+      },
+      {
+        "title": "Keyboards & Mice",
+        "description": "Switch and connection fixes."
+      }
+    ]
+  },
+  "ourIdentity": {
+    "badge": "Our Identity",
+    "title": "Revia provides fast, high-quality tech repair backed by top experts using trusted parts.",
+    "paragraph1": "At Revia, we're committed to providing fast, reliable, and professional electronics repair for the devices you rely on every day. Our skilled technicians use trusted methods, precise diagnostics, and high-quality parts to ensure every repair is completed with confidence and care.",
+    "paragraph2": "Whether it's a smartphone, laptop, tablet, or smartwatch, we approach every device with care, accuracy, and a commitment to lasting results. With transparent service, honest communication, and a full repair warranty, Revia brings your tech back to life with confidence and peace of mind.",
+    "aboutBtn": "About Us",
+    "contactBtn": "Contact Us"
+  },
+  "articles": {
+    "badge": "Knowledge Base",
+    "title": "Latest Repair Guides & Articles",
+    "viewAllBtn": "View All",
+    "items": [
+      {
+        "slug": "extend-smartphone-battery-life",
+        "date": "NOV 20, 2026",
+        "title": "How to Extend the Life of Your Smartphone Battery",
+        "description": "Learn simple habits and tips to keep your phone's battery healthy and lasting longer.",
+        "image": "/landing/article_battery.png",
+        "content": [
+          {
+            "type": "heading",
+            "text": "Understand How Batteries Age"
+          },
+          {
+            "type": "paragraph",
+            "text": "Every smartphone battery naturally wears down over time, and understanding this process is the first step toward extending its lifespan and overall reliability. Modern lithium-ion batteries lose capacity with every charge cycle, meaning the more often you charge from low to full, the quicker your battery degrades throughout regular use. Heat, heavy workloads, and constant high-drain usage can speed up this aging even further, placing extra stress on the internal cells. When a battery deteriorates, it may drain quicker, take longer to charge, or struggle to hold power during simple tasks, affecting the performance of your phone."
+          },
+          {
+            "type": "paragraph",
+            "text": "Recognizing the signs early helps you adjust your habits before the battery's condition declines significantly. If you notice rapid drops in percentage, overheating during normal use, or sudden shutdowns, it likely means the battery is under stress. Adopting healthier charging routines and reducing unnecessary strain day-to-day can slow down this natural wear, allowing your device to stay reliable for much longer."
+          },
+          {
+            "type": "heading",
+            "text": "Adopt Smarter Charging Habits"
+          },
+          {
+            "type": "paragraph",
+            "text": "One of the most effective ways to improve battery longevity is by changing how you charge your device. Allowing your battery to constantly reach 0% or sit at 100% puts strain on the internal cells. Instead, keeping your phone between 20% and 80% is ideal for long-term health. Frequent, small top-ups are much gentler on the battery than long, full charges. Avoid charging overnight, as this keeps your phone at maximum capacity for hours, heating up the battery and wearing it down faster."
+          },
+          {
+            "type": "paragraph",
+            "text": "Using high-quality, certified charging cables and adapters is just as important. Cheap or off-brand chargers can deliver inconsistent power, causing overheating, slow charging, or voltage spikes that affect the battery over time. Whenever possible, charge your device in cooler environments and remove thick or heat-trapping cases during intensive use. These small habits dramatically improve how long your battery stays strong."
+          },
+          {
+            "type": "heading",
+            "text": "Reduce Background Drain"
+          },
+          {
+            "type": "paragraph",
+            "text": "Your battery works harder than you might think - especially when background processes are constantly running without your awareness. Apps syncing in the background, frequent notifications, GPS services, and high refresh-rate displays can silently drain battery life throughout the entire day. When too many features are active at once, your phone requires more power to keep up, causing faster percentage drops and generating additional heat that accelerates battery wear far more quickly."
+          },
+          {
+            "type": "paragraph",
+            "text": "To prevent unnecessary drain, begin by closing apps you aren't actively using and turning off features you don't need, such as Bluetooth, location tracking, or high brightness settings whenever possible. Reducing your screen's refresh rate and limiting background activity for non-essential apps can significantly lighten the workload on your battery and improve overall efficiency. These simple adjustments reduce the total power demand, limit excess heat, and help extend the phone's daily runtime even during heavier use."
+          },
+          {
+            "type": "paragraph",
+            "text": "Even minor changes - like switching to dark mode, lowering screen timeout, or turning off unused widgets - can have a noticeable impact over time. Each improvement helps preserve battery health, lowers heat buildup, and makes your phone operate more efficiently in everyday use and beyond."
+          },
+          {
+            "type": "heading",
+            "text": "Avoid Heat and Environmental Stress"
+          },
+          {
+            "type": "paragraph",
+            "text": "Heat is one of the biggest enemies of smartphone batteries. High temperatures accelerate chemical aging inside the battery, making it lose capacity at a much faster and more noticeable rate over time. Everyday situations - like leaving your phone in a hot car, using it under direct sunlight, or charging it on soft surfaces that trap heat - can cause temperature spikes that damage internal components and reduce performance significantly. Even gaming or streaming for long periods can push the device to higher temperatures far beyond what the battery was originally designed to safely handle."
+          },
+          {
+            "type": "paragraph",
+            "text": "To protect your battery, try to use your phone in cooler conditions whenever possible. Remove heavy cases when charging or gaming, avoid prolonged use in the sun, and let your device rest when it begins to feel warm or sluggish. Many users overlook environmental stress, but keeping temperatures under control is one of the most effective and reliable ways to extend overall battery life consistently."
+          },
+          {
+            "type": "heading",
+            "text": "Maintain Your Software & Hardware"
+          },
+          {
+            "type": "paragraph",
+            "text": "Keeping your phone updated plays a bigger role in battery life than many realize. Software updates often improve power efficiency, fix bugs, and introduce newer, smarter energy-saving features that reduce unnecessary drain. Outdated apps or operating systems can create memory leaks, background processes, and overheating - all factors that accelerate battery wear and reduce device stability over time. Regular restarts also help clear temporary files and processes that place unnecessary strain on the battery and can gradually impact long-term performance more than expected."
+          },
+          {
+            "type": "paragraph",
+            "text": "On the hardware side, if your battery is already showing signs of decline, replacing it early can prevent further performance issues and unexpected failures. A failing battery forces your device to work harder, putting stress on other components throughout daily use. Professional battery diagnostics or timely replacements ensure your phone stays safe, reliable, and efficient well beyond its original lifespan."
+          }
+        ]
+      },
+      {
+        "slug": "common-phone-issues",
+        "date": "NOV 4, 2026",
+        "title": "Common Phone Issues and How to Prevent Them",
+        "description": "From cracked screens to charging issues, what causes issues and how to avoid them.",
+        "image": "/landing/article_common_issues.png",
+        "content": []
+      },
+      {
+        "slug": "devices-overheat",
+        "date": "OCT 17, 2026",
+        "title": "Why Devices Overheat and What You Can Do",
+        "description": "Discover the reasons your device overheats and the best steps to cool it down safely.",
+        "image": "/landing/article_overheat.png",
+        "content": []
+      },
+      {
+        "slug": "signs-device-repair",
+        "date": "OCT 8, 2026",
+        "title": "Signs Your Device Likely Needs Professional Repair",
+        "description": "Discover warning signs that suggest your phone, laptop, or console needs expert help.",
+        "image": "/landing/article_signs_repair.png",
+        "content": []
+      },
+      {
+        "slug": "benefits-repairing",
+        "date": "SEP 21, 2026",
+        "title": "The Benefits of Repairing Instead of Replacing",
+        "description": "How repair saves money, lowers e-waste, and keeps your devices lasting longer.",
+        "image": "/landing/article_benefits_repair.png",
+        "content": []
+      },
+      {
+        "slug": "protect-phone-damage",
+        "date": "SEP 3, 2026",
+        "title": "How to Protect Your Phone from Everyday Damage",
+        "description": "Practical tips to prevent drops, scratches, water exposure, and other common risks.",
+        "image": "/landing/article_protect_phone.png",
+        "content": []
+      }
+    ]
+  },
+  "knowledgeHub": {
+    "badge": "Knowledge Hub",
+    "title": "Tech Advice &\nRepair Insights",
+    "subtitle": "Explore expert tips, detailed repair insights, and practical advice created to help you care for your tech with confidence.",
+    "aboutBtn": "About Us"
+  },
+  "cta": {
+    "title": "Ready to fix your device?",
+    "subtitle": "Get a transparent, AI-powered diagnosis in minutes.",
+    "button": "Start Free Diagnosis Now"
+  },
+  "takeAction": {
+    "badge": "TAKE ACTION",
+    "title": "Get Your Device\nRepaired Today",
+    "description": "Bring your device back to life with fast, dependable repair you can confidently count on every time.",
+    "contactBtn": "Start Free Diagnosis"
+  },
+  "footer": {
+    "description": "Reliable device repair with expert service,\ntransparent pricing, and trusted parts.",
+    "columns": {
+      "menu": {
+        "title": "MENU",
+        "home": "Home",
+        "about": "About Us",
+        "features": "Features"
+      },
+      "company": {
+        "title": "COMPANY",
+        "howItWorks": "How it Works",
+        "blog": "Blog",
+        "contact": "Contact"
+      },
+      "contact": {
+        "title": "CONTACT",
+        "call": "Call Us",
+        "email": "Email Us",
+        "visit": "Visit Us"
+      },
+      "follow": {
+        "title": "FOLLOW",
+        "linkedin": "LinkedIn",
+        "facebook": "Facebook",
+        "twitter": "X (Twitter)"
+      }
+    },
+    "copyright": "© 2026, ALL RIGHTS RESERVED",
+    "privacy": "Privacy Policy",
+    "backToTop": "Back To Top"
+  },
+  "contact_us": {
+    "workingHours": {
+      "badge": "WORKING HOURS",
+      "time": "9 AM – 7 PM",
+      "description": "We're open daily, and our technicians are here to help,\nanswer your questions, and take care of your device.",
+      "directions": "Get Directions"
+    },
+    "form": {
+      "badge": "REACH OUT",
+      "title": "We Can Help",
+      "description": "Send us a quick message and we'll follow up with fast,\nfriendly, and dependable support whenever you need it.",
+      "labels": {
+        "fullName": "FULL NAME",
+        "email": "EMAIL",
+        "phone": "PHONE",
+        "inquiryType": "INQUIRY TYPE",
+        "message": "MESSAGE"
+      },
+      "placeholders": {
+        "fullName": "Enter your full name",
+        "email": "Enter your email",
+        "phone": "Enter your phone",
+        "inquiryType": "Choose your topic",
+        "message": "Tell us how we can help"
+      },
+      "button": "Send Message"
+    }
+  },
+  "privacy_policy": {
+    "header": {
+      "badge": "SAFE & SECURE",
+      "title": "Privacy Policy",
+      "subtitle": "Learn how we collect, use, and protect your information when you interact with Revia across all our services and platforms.",
+      "lastUpdated": "LAST UPDATED: MAR 03, 2026"
+    },
+    "content": [
+      {
+        "title": "1. Information We Collect",
+        "body": "We collect specific information to provide reliable repair services, offer accurate support, and continuously improve the experience you have with Revia. This information helps us understand your needs, communicate effectively, and deliver services tailored to your device and situation.",
+        "subsections": [
+          {
+            "title": "1.1 Personal Information",
+            "body": "When you interact with us – whether through our contact form, by phone, or in person – we may collect basic personal details such as your name, email address, phone number, device model, and the issue you're experiencing. In some cases, you may choose to upload images to help us assess the problem more accurately. This information ensures we can respond quickly, provide correct assessments, and follow up with updates regarding your repair request."
+          },
+          {
+            "title": "1.2 Automatically Collected Information",
+            "body": "When you browse our website, certain data may be collected automatically through cookies, analytics tools, or your web browser. This includes your IP address, device type, browser details, pages visited, time spent on our site, and referral sources. We use this technical data to improve site performance, understand user behavior, and deliver a smoother browsing experience."
+          }
+        ]
+      },
+      {
+        "title": "2. How We Use Your Information",
+        "body": "We use your information to operate our business, deliver strong customer support, and provide a reliable repair experience. Your data allows us to respond to inquiries quickly, keep you informed, and ensure your device receives the care it needs.\n\nMore specifically, we may use your information for the following purposes:\n\n• To respond to your messages or questions and provide accurate, timely support.\n• To prepare repair quotes, assess device issues, and update you throughout the repair process.\n• To improve our services, evaluate customer needs, and enhance communication.\n• To send service confirmations, status updates, or important notifications related to your repair.\n• To analyze website performance and ensure a smoother, more efficient browsing experience.\n• To maintain internal business records, such as repair history or customer communication logs.\n\nWe do not sell or rent your personal information to third parties under any circumstances."
+      },
+      {
+        "title": "3. Sharing Your Information",
+        "body": "We only share your information when it is necessary to operate our business, deliver requested services, or comply with legal obligations. This sharing is performed carefully and only with trusted partners who follow strong privacy and security practices.\n\nWe may share your information with:\n\n• Service providers who assist with website hosting, analytics, communication tools, or payment processing.\n• Technicians or specialists involved in diagnosing or repairing your device.\n• Legal authorities, if required to comply with a law, regulation, or valid legal request such as a subpoena or court order.\n\nThese partners are given access only to the information they need and are required to use it solely for the purpose of assisting Revia."
+      },
+      {
+        "title": "4. Cookies & Tracking Technologies",
+        "body": "Our website uses cookies and similar technologies to help us create a smoother, faster, and more personalized experience. Cookies allow us to remember your preferences, understand how visitors navigate our site, and improve the performance of our pages.\n\nSome cookies help ensure essential functions work correctly, while others allow us to analyze user interactions so we can enhance usability. You are free to disable cookies through your browser settings, though certain features of our website may not function as intended without them."
+      },
+      {
+        "title": "5. Data Storage & Security",
+        "body": "We take your data security seriously and use industry-standard protections designed to keep your information safe. This includes secure servers, encrypted connections (HTTPS), limited access controls, and continuous monitoring to prevent unauthorized access or misuse. While no system is completely immune to risks, we continuously work to protect your information with strong, modern security measures.\n\nWe retain your personal information only for as long as necessary to fulfill the purposes described in this policy, including completing repair services, complying with legal requirements, and maintaining accurate business records. When information is no longer needed, we securely delete or anonymize it to prevent unauthorized use."
+      },
+      {
+        "title": "6. Third-Party Links",
+        "body": "Our website may contain links to third-party sites, tools, or resources. These external websites operate independently and have their own privacy policies, which may differ from ours. Revia is not responsible for their content, data practices, or security measures.\n\nWe encourage you to review the privacy policies of any third-party websites you visit to understand how your information may be collected and used outside of our control."
+      },
+      {
+        "title": "7. Updates to This Policy",
+        "body": "We may occasionally update this Privacy Policy to reflect changes in our services, business practices, or legal requirements. When changes are made, we will update the \"Last updated\" date at the top of this page. Your continued use of our website or services indicates acceptance of the updated policy."
+      },
+      {
+        "title": "8. Contact Us",
+        "body": "If you have questions about this Privacy Policy or would like to request more information about how your data is handled, please feel free to reach out at hello@revia.com. We're always here to help."
+      }
+    ]
+  },
+  "notFound": {
+    "title": "Page Not Found",
+    "subtitle": "The page you are looking for might have been moved, deleted, or never existed.",
+    "backHome": "Back to Home",
+    "errorMessage": "Oops! We can't find that page."
+  }
+}

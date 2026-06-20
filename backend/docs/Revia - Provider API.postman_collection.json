@@ -1,0 +1,1209 @@
+{
+  "info": {
+    "_postman_id": "d7d8ca24-0273-4948-b14f-6a1f3abf02a0",
+    "name": "Revia - Provider API",
+    "description": "Revia Provider API collection. After login, the access token is automatically saved to the `providerAccessToken` variable and used in all subsequent requests.",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "49384247",
+    "_collection_link": "https://go.postman.co/collection/49384247-d7d8ca24-0273-4948-b14f-6a1f3abf02a0?source=collection_link"
+  },
+  "item": [
+    {
+      "name": "Auth",
+      "item": [
+        {
+          "name": "Login",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "exec": [
+                  "const res = pm.response.json();",
+                  "if (res && res.data && res.data.accessToken) {",
+                  "    pm.collectionVariables.set('providerAccessToken', res.data.accessToken);",
+                  "    console.log('✅ providerAccessToken saved:', res.data.accessToken);",
+                  "} else {",
+                  "    console.warn('⚠️ No accessToken found in response:', JSON.stringify(res));",
+                  "}"
+                ],
+                "type": "text/javascript",
+                "packages": {},
+                "requests": {}
+              }
+            }
+          ],
+          "request": {
+            "auth": {
+              "type": "noauth"
+            },
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"phoneNumber\": \"01145350998\",\n  \"password\": \"Y@ussef1\",\n  \"languagePreference\": \"en\"\n}"
+            },
+            "url": {
+              "raw": "{{baseUrl}}/auth/login",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "auth",
+                "login"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Signup (Register Brand + Provider)",
+          "request": {
+            "auth": {
+              "type": "noauth"
+            },
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                {
+                  "key": "languagePreference",
+                  "value": "en",
+                  "type": "text"
+                },
+                {
+                  "key": "providerData[name]",
+                  "value": "Ahmed Ali",
+                  "type": "text"
+                },
+                {
+                  "key": "providerData[email]",
+                  "value": "eng.youssef.gamal@gmail.com",
+                  "type": "text"
+                },
+                {
+                  "key": "providerData[phoneNumber]",
+                  "value": "01145350998",
+                  "type": "text"
+                },
+                {
+                  "key": "providerData[password]",
+                  "value": "Y@ussef1",
+                  "type": "text"
+                },
+                {
+                  "key": "brandData[name][en]",
+                  "value": "My Brand",
+                  "type": "text"
+                },
+                {
+                  "key": "brandData[name][ar]",
+                  "value": "علامتي التجارية",
+                  "type": "text"
+                },
+                {
+                  "key": "brandData[crn]",
+                  "value": "CRN-001-2024",
+                  "type": "text"
+                },
+                {
+                  "key": "brandData[tin]",
+                  "value": "TIN-001-2024",
+                  "type": "text"
+                },
+                {
+                  "key": "brandData[allowPayUsePOS]",
+                  "value": "true",
+                  "type": "text"
+                },
+                {
+                  "key": "brandData[branches][0][name][en]",
+                  "value": "Main Branch",
+                  "type": "text"
+                },
+                {
+                  "key": "brandData[branches][0][name][ar]",
+                  "value": "الفرع الرئيسي",
+                  "type": "text"
+                },
+                {
+                  "key": "brandData[branches][0][location][latitude]",
+                  "value": "30.0444",
+                  "type": "text"
+                },
+                {
+                  "key": "brandData[branches][0][location][longitude]",
+                  "value": "31.2357",
+                  "type": "text"
+                },
+                {
+                  "key": "logo",
+                  "type": "file",
+                  "src": "postman-cloud:///1f110411-9248-4b20-8593-73ace4748e5a"
+                },
+                {
+                  "key": "brandData[categories][0]",
+                  "value": "699b859d51963f0a26785a06",
+                  "type": "text",
+                  "uuid": "489b8b26-0757-46dc-acf4-6b881acb5e1b"
+                },
+                {
+                  "key": "brandData[categories][1]",
+                  "value": "699b85b451963f0a26785a09",
+                  "type": "text",
+                  "uuid": "bddf5b1d-70d3-4d09-b1b0-0eac5eb16d8b"
+                }
+              ]
+            },
+            "url": {
+              "raw": "{{baseUrl}}/auth/signup",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "auth",
+                "signup"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Forgot Password",
+          "request": {
+            "auth": {
+              "type": "noauth"
+            },
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"phoneNumber\": \"01145350998\",\n  \"languagePreference\": \"en\"\n}"
+            },
+            "url": {
+              "raw": "{{baseUrl}}/auth/forgot-password",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "auth",
+                "forgot-password"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Verify Password OTP",
+          "request": {
+            "auth": {
+              "type": "noauth"
+            },
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"phoneNumber\": \"01145350998\",\n  \"otp\": \"102030\",\n  \"languagePreference\": \"en\"\n}"
+            },
+            "url": {
+              "raw": "{{baseUrl}}/auth/verify-password-otp",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "auth",
+                "verify-password-otp"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Reset Password",
+          "request": {
+            "auth": {
+              "type": "noauth"
+            },
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"phoneNumber\": \"01145350998\",\n  \"newPassword\": \"Y@ussef1\",\n  \"otp\": \"102030\",\n  \"languagePreference\": \"en\"\n}"
+            },
+            "url": {
+              "raw": "{{baseUrl}}/auth/reset-password",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "auth",
+                "reset-password"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Profile",
+      "item": [
+        {
+          "name": "Get My Profile",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/me",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "me"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Update My Profile",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"name\": \"Ahmed\",\n  \"languagePreference\": \"en\"\n}\n\n\n/*\n  name\n  languagePreference\n  email\n  */"
+            },
+            "url": {
+              "raw": "{{baseUrl}}/me",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "me"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Brand",
+      "item": [
+        {
+          "name": "Get My Brand",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/brand",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "brand"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get My Brand Reviews",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/brand/reviews",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "brand",
+                "reviews"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Update Brand",
+          "request": {
+            "method": "DELETE",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"name\": {\n    \"en\": \"My Updated Brand\",\n    \"ar\": \"علامتي المحدثة\"\n  },\n  \"allowPayUsePOS\": false\n}"
+            },
+            "url": {
+              "raw": "{{baseUrl}}/brand/update",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "brand",
+                "update"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Branch",
+      "item": [
+        {
+          "name": "Create Branch",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"name\": {\n        \"en\": \"Test\",\n        \"ar\": \"Test\"\n    },\n    \"location\": {\n        \"latitude\": 30.0444,\n        \"longitude\": 31.2357\n    },\n    \"isActive\": false\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{baseUrl}}/branch",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "branch"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Update Branch",
+          "request": {
+            "method": "DELETE",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"name\": {\n    \"en\": \"Updated Branch\",\n    \"ar\": \"فرع محدث\"\n  },\n  \"location\": {\n    \"latitude\": 30.0444,\n    \"longitude\": 31.2357\n  },\n  \"isActive\": true\n}"
+            },
+            "url": {
+              "raw": "{{baseUrl}}/branch/:index/update",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "branch",
+                ":index",
+                "update"
+              ],
+              "variable": [
+                {
+                  "key": "index",
+                  "value": "1"
+                }
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Account Management - Providers",
+      "item": [
+        {
+          "name": "Get Provider List",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/account/list?page=1&limit=20",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "account",
+                "list"
+              ],
+              "query": [
+                {
+                  "key": "page",
+                  "value": "1"
+                },
+                {
+                  "key": "limit",
+                  "value": "20"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Create Provider",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"name\": \"New Staff Member\",\n  \"email\": \"staff@brand.com\",\n  \"phoneNumber\": \"01234567891\",\n  \"role\": \"owner\",\n  \"password\": \"Staff@123456\",\n  \"languagePreference\": \"en\"\n}"
+            },
+            "url": {
+              "raw": "{{baseUrl}}/account/create",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "account",
+                "create"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Update Provider",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"role\": \"owner\"\n}"
+            },
+            "url": {
+              "raw": "{{baseUrl}}/account/:id/update",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "account",
+                ":id",
+                "update"
+              ],
+              "variable": [
+                {
+                  "key": "id",
+                  "value": "699b8d83b95cba8346f75fd3"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Ban Provider",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/account/:id/ban",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "account",
+                ":id",
+                "ban"
+              ],
+              "variable": [
+                {
+                  "key": "id",
+                  "value": "699b8d83b95cba8346f75fd3"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Unban Provider",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/account/:id/unban",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "account",
+                ":id",
+                "unban"
+              ],
+              "variable": [
+                {
+                  "key": "id",
+                  "value": "699b8d83b95cba8346f75fd3"
+                }
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Category",
+      "item": [
+        {
+          "name": "Get Category List",
+          "request": {
+            "auth": {
+              "type": "noauth"
+            },
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/category/list?page=1&limit=50",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "category",
+                "list"
+              ],
+              "query": [
+                {
+                  "key": "page",
+                  "value": "1"
+                },
+                {
+                  "key": "limit",
+                  "value": "50"
+                }
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Payouts",
+      "item": [
+        {
+          "name": "Submit Payout Request",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"amount\": 1500,\n  \"method\": \"instapay\",\n  \"instapayDestination\": {\n    \"identifier\": \"youssef@instapay\",\n    \"accountHolderName\": \"Youssef Gamal\"\n  }\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{baseUrl}}/payouts",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "payouts"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Submit Payout Request (Bank)",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"amount\": 5000,\n  \"method\": \"bank\",\n  \"bankDestination\": {\n    \"bankName\": \"CIB\",\n    \"accountHolderName\": \"Youssef Gamal\",\n    \"iban\": \"EG1234567890123456789012345\",\n    \"accountNumber\": \"100020003000\",\n    \"swiftCode\": \"CIBEEGXXX\"\n  }\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{baseUrl}}/payouts",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "payouts"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Submit Payout Request (Wallet)",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"amount\": 800,\n  \"method\": \"wallet\",\n  \"walletDestination\": {\n    \"walletProvider\": \"vodafone\",\n    \"phoneNumber\": \"01012345678\",\n    \"accountHolderName\": \"Youssef Gamal\"\n  }\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{baseUrl}}/payouts",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "payouts"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "List Brand Payouts",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/payouts",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "payouts"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get Wallet Balance",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/payouts/wallet/balance",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "payouts",
+                "wallet",
+                "balance"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get Wallet Transactions",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/payouts/wallet/transactions",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "payouts",
+                "wallet",
+                "transactions"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Repair Requests",
+      "item": [
+        {
+          "name": "Get Active Requests",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/repair-requests/active",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "repair-requests",
+                "active"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get Pending Offers",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/repair-requests/pending-offers",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "repair-requests",
+                "pending-offers"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Send Offer",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"branchIndex\": 0,\n  \"offerItems\": [\n    {\n      \"expectedIssue\": \"Broken screen replacement\",\n      \"priceRange\": {\n        \"min\": 2000,\n        \"max\": 2500\n      },\n      \"expectedFinishDate\": \"2026-03-20T10:00:00.000Z\"\n    }\n  ],\n  \"distanceKm\": 5.5,\n  \"inspectionPrice\": 150\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{baseUrl}}/repair-requests/:requestId/offer",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "repair-requests",
+                ":requestId",
+                "offer"
+              ],
+              "variable": [
+                {
+                  "key": "requestId",
+                  "value": "69acc6d6fd28da5255670b1f"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Send Inspection Result",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"resultNotes\": \"Screen requires full replacement. Inspected the device internally.\",\n  \"finalPrice\": 2400,\n  \"images\": [\n    \"https://example.com/image1.jpg\"\n  ]\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{baseUrl}}/repair-requests/:requestId/inspection",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "repair-requests",
+                ":requestId",
+                "inspection"
+              ],
+              "variable": [
+                {
+                  "key": "requestId",
+                  "value": "69acc6d6fd28da5255670b1f"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Finish Repair",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/repair-requests/:requestId/finish",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "repair-requests",
+                ":requestId",
+                "finish"
+              ],
+              "variable": [
+                {
+                  "key": "requestId",
+                  "value": "69acc6d6fd28da5255670b1f"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "User Get Device",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/repair-requests/:requestId/user-get-device",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "repair-requests",
+                ":requestId",
+                "user-get-device"
+              ],
+              "variable": [
+                {
+                  "key": "requestId",
+                  "value": "69acc6d6fd28da5255670b1f"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Pay Inspection",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"method\": \"cash\" // pos\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{baseUrl}}/repair-requests/:requestId/pay-inspection",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "repair-requests",
+                ":requestId",
+                "pay-inspection"
+              ],
+              "variable": [
+                {
+                  "key": "requestId",
+                  "value": "69acc6d6fd28da5255670b1f"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Pay Final",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"method\": \"pos\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{baseUrl}}/repair-requests/:requestId/pay-final",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "repair-requests",
+                ":requestId",
+                "pay-final"
+              ],
+              "variable": [
+                {
+                  "key": "requestId",
+                  "value": "69acc6d6fd28da5255670b1f"
+                }
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Reels",
+      "item": [
+        {
+          "name": "Get Reels",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": ""
+            },
+            "url": {
+              "raw": "{{baseUrl}}/reel/",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "reel",
+                ""
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Create Reel",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                {
+                  "key": "caption[en]",
+                  "value": "test",
+                  "type": "text",
+                  "uuid": "b2a47994-471e-4824-8d3b-f0ba5c29ad87"
+                },
+                {
+                  "key": "caption[ar]",
+                  "value": "test",
+                  "type": "text",
+                  "uuid": "3c420f35-e1d5-4ace-882b-b5e241edc947"
+                },
+                {
+                  "key": "video",
+                  "type": "file",
+                  "uuid": "d50c34e1-a50e-4204-8702-60277f2e3de9",
+                  "src": "/Users/youssef/Downloads/file_example_MP4_480_1_5MG.mp4"
+                }
+              ]
+            },
+            "url": {
+              "raw": "{{baseUrl}}/reel/",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "reel",
+                ""
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Update Reel",
+          "request": {
+            "method": "PATCH",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"caption\": {\n        \"en\": \"Updated English Caption\",\n        \"ar\": \"تعليق عربي محدث\"\n    },\n    \"isVisible\": false\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{baseUrl}}/reel/:id",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "reel",
+                ":id"
+              ],
+              "variable": [
+                {
+                  "key": "id",
+                  "value": ""
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Delete Reel",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/reel/:id",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "reel",
+                ":id"
+              ],
+              "variable": [
+                {
+                  "key": "id",
+                  "value": ""
+                }
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    }
+  ],
+  "auth": {
+    "type": "bearer",
+    "bearer": [
+      {
+        "key": "token",
+        "value": "{{providerAccessToken}}",
+        "type": "string"
+      }
+    ]
+  },
+  "event": [
+    {
+      "listen": "prerequest",
+      "script": {
+        "type": "text/javascript",
+        "packages": {},
+        "requests": {},
+        "exec": [
+          ""
+        ]
+      }
+    },
+    {
+      "listen": "test",
+      "script": {
+        "type": "text/javascript",
+        "packages": {},
+        "requests": {},
+        "exec": [
+          ""
+        ]
+      }
+    }
+  ],
+  "variable": [
+    {
+      "key": "baseUrl",
+      "value": "http://localhost:10001/api/v1/provider"
+    },
+    {
+      "key": "providerAccessToken",
+      "value": ""
+    }
+  ]
+}

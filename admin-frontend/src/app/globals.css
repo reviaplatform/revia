@@ -1,0 +1,293 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+:root {
+  --background: #ffffff; /* Pure White */
+  --foreground: #080808; /* Near Black */
+  --card: #ffffff;
+  --card-foreground: #080808;
+  --popover: #ffffff;
+  --popover-foreground: #080808;
+  --primary: #146ef5; /* Webflow Blue */
+  --primary-foreground: #ffffff;
+  --secondary: #7a3dff; /* Webflow Purple */
+  --secondary-foreground: #ffffff;
+  --muted: #f5f5f5; /* Light Gray */
+  --muted-foreground: #5a5a5a; /* Mid Gray */
+  --accent: #f5f5f5;
+  --accent-foreground: #080808;
+  --destructive: #ee1d36; /* Webflow Red */
+  --destructive-foreground: #ffffff;
+  --border: #d8d8d8; /* Border Gray */
+  --input: #ffffff;
+  --ring: #146ef5;
+  --radius: 4px; /* Sharp corners */
+  
+  /* Webflow 5-layer cascading shadow - REMOVED */
+  --shadow-wf: none !important;
+
+  /* Additional Webflow Accents */
+  --wf-pink: #ed52cb;
+  --wf-green: #00d722;
+  --wf-orange: #ff6b00;
+  --wf-yellow: #ffae13;
+
+  --sidebar: #ffffff;
+  --sidebar-foreground: #080808;
+  --sidebar-primary: #146ef5;
+  --sidebar-primary-foreground: #ffffff;
+  --sidebar-accent: #f5f5f5;
+  --sidebar-accent-foreground: #080808;
+  --sidebar-border: #d8d8d8;
+  --sidebar-ring: #146ef5;
+  --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.dark {
+  --background: #080808; /* Near Black */
+  --foreground: #ffffff;
+  --card: #111111;
+  --card-foreground: #ffffff;
+  --popover: #111111;
+  --popover-foreground: #ffffff;
+  --primary: #146ef5;
+  --primary-foreground: #ffffff;
+  --secondary: #7a3dff;
+  --secondary-foreground: #ffffff;
+  --muted: #1a1a1a;
+  --muted-foreground: #ababab;
+  --accent: #1a1a1a;
+  --accent-foreground: #ffffff;
+  --destructive: #ee1d36;
+  --destructive-foreground: #ffffff;
+  --border: #363636;
+  --input: #111111;
+  --ring: #146ef5;
+
+  --sidebar: #111111;
+  --sidebar-foreground: #ffffff;
+  --sidebar-primary: #146ef5;
+  --sidebar-primary-foreground: #ffffff;
+  --sidebar-accent: #1a1a1a;
+  --sidebar-accent-foreground: #ffffff;
+  --sidebar-border: #363636;
+  --sidebar-ring: #146ef5;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  
+  --shadow-wf: var(--shadow-wf);
+  
+  --color-wf-pink: var(--wf-pink);
+  --color-wf-green: var(--wf-green);
+  --color-wf-orange: var(--wf-orange);
+  --color-wf-yellow: var(--wf-yellow);
+
+  --radius-sm: 2px;
+  --radius-md: 4px;
+  --radius-lg: 8px;
+  --radius-xl: 12px;
+
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+
+  --animate-wf-hover: translate(0, -6px);
+}
+
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  
+  /* Base typography overrides */
+  h1 { @apply text-[56px] font-semibold leading-[1.04]; }
+  h2 { @apply text-[32px] font-medium leading-[1.30]; }
+  h3 { @apply text-[24px] font-semibold leading-[1.30]; }
+  
+  body {
+    @apply bg-background text-foreground antialiased text-[16px] leading-[1.60] tracking-[-0.16px];
+    font-variant-ligatures: common-ligatures;
+    font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+  }
+
+  h1, h2, h3, h4, h5, h6, 
+  .font-heading {
+    font-family: var(--font-heading), var(--font-inter), system-ui;
+    letter-spacing: -0.02em;
+  }
+}
+
+@layer components {
+  /* Webflow Typography Hierarchy */
+  .heading-hero {
+    @apply text-[80px] font-semibold leading-[1.04] tracking-[-0.8px];
+  }
+  
+  .heading-section {
+    @apply text-[56px] font-semibold leading-[1.04];
+  }
+  
+  .heading-sub {
+    @apply text-[32px] font-medium leading-[1.30];
+  }
+  
+  .heading-feature {
+    @apply text-[24px] font-semibold leading-[1.30];
+  }
+  
+  .label-uppercase {
+    @apply text-[15px] font-medium uppercase leading-[1.30] tracking-[1.5px];
+  }
+
+  .label-micro {
+    @apply text-[10px] font-semibold uppercase leading-[1.30] tracking-[1px];
+  }
+
+
+  /* Dashboard Data Logic */
+  .dashboard-data,
+  [data-slot="card"] *,
+  table * {
+    font-variant-numeric: tabular-nums;
+  }
+
+  /* Optimized Component Styles */
+  .card {
+    @apply bg-card text-card-foreground border;
+    border-radius: var(--radius);
+    transition: transform 0.3s var(--ease-out-expo), box-shadow 0.3s var(--ease-out-expo), background-color 0.3s var(--ease-out-expo);
+  }
+
+  .card:hover {
+    @apply bg-accent/5;
+  }
+
+  /* Webflow Hover Animation */
+  .btn-wf-hover {
+    transition: transform 0.2s var(--ease-out-expo), background-color 0.2s var(--ease-out-expo), box-shadow 0.2s var(--ease-out-expo);
+  }
+
+  .btn-wf-hover:hover {
+    transform: translateY(-2px);
+  }
+
+
+  /* Base Element Normalization */
+  button, 
+  [role="button"] {
+    @apply rounded-md font-medium transition-all duration-300;
+    border-radius: var(--radius);
+  }
+
+  input,
+  textarea,
+  select {
+    @apply bg-input border-border text-foreground transition-all duration-300;
+    border-radius: var(--radius);
+  }
+
+  input:focus,
+  textarea:focus,
+  select:focus {
+    @apply outline-none ring-2 ring-primary/20 border-primary;
+  }
+
+  /* Remove heavy overrides from previous system */
+  .dark button,
+  .dark input,
+  .dark select {
+    background-color: transparent; /* Let tailwind classes handle it */
+    border-color: var(--border);
+  }
+
+  /* Scrollbar Polish */
+  ::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+  }
+  ::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: var(--border);
+    border-radius: 4px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: var(--muted-foreground);
+  }
+}
+
+@layer utilities {
+  .shadow-wf {
+    box-shadow: none;
+  }
+  
+  .hover-translate-wf {
+    @apply transition-transform duration-300;
+  }
+  
+  .hover-translate-wf:hover {
+    transform: translate(0, -6px);
+  }
+}
+
+/* Design System Migration Complete */
+
+/* Enhanced Notification System (Sonner) */
+[data-sonner-toast] {
+  font-family: var(--font-inter), system-ui !important;
+}
+
+[data-sonner-toast][data-type="success"] {
+  background: var(--success-bg) !important;
+  color: var(--success-text) !important;
+  border: 1px solid var(--success-border) !important;
+}
+
+[data-sonner-toast][data-type="error"] {
+  background: var(--error-bg) !important;
+  color: var(--error-text) !important;
+  border: 1px solid var(--error-border) !important;
+}
+
+[data-sonner-toast] [data-icon] {
+  color: currentColor !important;
+}
+
+[data-sonner-toast] [data-title] {
+  font-weight: 600 !important;
+  letter-spacing: -0.01em !important;
+}
+
+[data-sonner-toast] [data-description] {
+  opacity: 0.9 !important;
+  font-size: 0.85rem !important;
+}
